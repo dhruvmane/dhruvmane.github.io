@@ -113,7 +113,7 @@
     import talentOne from '$lib/assets/talents/1.png'
     
 
-    let showTalents = false;
+    let showTalents = true;
     let talents: any = $state([])
     
     if (showTalents){

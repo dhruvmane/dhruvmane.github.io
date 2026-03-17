@@ -177,6 +177,13 @@
                         <span>JS</span>
                     </div>
                 {/if}
+                {#if stack == 'rustIcon'}
+                    <div class="tech-stack">
+                        <img class="tech-stack-icon" src={rustIcon} alt="rustIcon">
+                        <span>Rust</span>
+                    </div>
+                {/if}
+
             {/each}
         </div>
     </div>
