@@ -35,6 +35,8 @@
         width: 400px;
         z-index: -1;
         border-radius: 3px;
+        object-fit: cover;
+        object-position: center;
     }
 
     p {

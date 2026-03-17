@@ -111,6 +111,7 @@
     import githubIcon from '$lib/assets/icons/github.svg';
     import Talents from '$lib/components/Talents.svelte'
     import talentOne from '$lib/assets/talents/1.png'
+    import talentTwo from '$lib/assets/talents/2.png'
     
 
     let showTalents = true;
@@ -119,6 +120,7 @@
     if (showTalents){
         talents = [
             {title: "SESIM", description: "a Stock Exchange Simulator.", card: talentOne, tech_stack: ["svelteIcon", "viteIcon", "expressjsIcon"]},
+            {title: "GRAPIFY", description: "Keep your Expenses in Check with GRAPIFY.", card: talentTwo, tech_stack: ["svelteIcon", "viteIcon", "tauriIcon", "rustIcon"]},
         ]
     }
     
