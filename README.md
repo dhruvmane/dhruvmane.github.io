@@ -1,2 +1,1 @@
-# dhruvmane.github.io
-Portfolio Website in Sveltekit.
+dhruvmane.github.io
