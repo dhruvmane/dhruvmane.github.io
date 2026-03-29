@@ -10,7 +10,7 @@
     import javascriptIcon from '$lib/assets/tech_stack/javascript.svg';
     import rustIcon from '$lib/assets/tech_stack/rust.svg';
 
-    let { title, description, card, tech_stack } = $props()
+    let { title, description, card, tech_stack, href } = $props()
 
 </script>
 
@@ -19,6 +19,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
+    * {
+        text-decoration: none;
+    }
+
+    a {
+        cursor: grab;
+        color: inherit;
+        border-color: inherit;
+    }
+
     h1 {
         margin: 0;
         margin-left: 20px;
@@ -26,7 +36,7 @@
         color: rgb(255, 251, 217);
 
         font-family: 'Notable';
-        font-size: 55px;
+        font-size: 45px;
         z-index: 1;        
     }
 
@@ -66,6 +76,7 @@
         background: rgb(31, 31, 31);
 
         width: 400px;
+        height: 400px;
 
         border-style: solid;
         border-color: rgb(255, 246, 222);
@@ -75,11 +86,18 @@
         z-index: 100;        
     }
 
+    .talentCards:hover {
+        transition: 0.3s ease-in-out;
+        transform: scale(1.025);
+    }
+
     .tech-stack-field {
+        position: absolute;
+        bottom: 10px;
         text-align: left;
         margin: 0;
         padding: 0;
-        margin-top: 50px;
+        margin-bottom: 15px;
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -125,6 +143,7 @@
 
 </style>
 <main>
+    <a href="{href}">
     <div class="talentCards">
         <img class="talent-card" src={card} alt="talent-card">
         <h1>{title}</h1>
@@ -189,4 +208,5 @@
             {/each}
         </div>
     </div>
+    </a>
 </main>

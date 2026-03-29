@@ -67,6 +67,16 @@
         transform: scale(1.4);
         background: none;
         border: 0;
+        transition: 0.2s ease-in-out;
+    }
+
+    .contacts:hover {
+        transition: 0.2s ease-in-out;
+        filter: invert(100%);
+    }
+
+    .contactsIcon {
+        transform: scale(1.4);
     }
 
     @keyframes blinking {
@@ -112,23 +122,29 @@
     import Talents from '$lib/components/Talents.svelte'
     import talentOne from '$lib/assets/talents/1.png'
     import talentTwo from '$lib/assets/talents/2.png'
+    import talentThree from '$lib/assets/talents/3.png'
     
 
     let showTalents = true;
     let talents: any = $state([])
+    let contacts: any = $state([])
     
     if (showTalents){
         talents = [
-            {title: "SESIM", description: "a Stock Exchange Simulator.", card: talentOne, tech_stack: ["svelteIcon", "viteIcon", "expressjsIcon"]},
-            {title: "GRAPIFY", description: "Keep your Expenses in Check with GRAPIFY.", card: talentTwo, tech_stack: ["svelteIcon", "viteIcon", "tauriIcon", "rustIcon"]},
+            {title: "SESIM", description: "(W.I.P) a Stock Exchange Simulator.", card: talentOne, tech_stack: ["svelteIcon", "viteIcon", "expressjsIcon"], href: "https://github.com/dhruvmane/sesim"},
+            {title: "GRAPIFY", description: "(W.I.P) Keep your Expenses in Check with GRAPIFY.", card: talentTwo, tech_stack: ["svelteIcon", "viteIcon", "tauriIcon", "rustIcon"], href: "https://github.com/dhruvmane/grapify"},
+            {title: "TRADEBULL", description: "(Hackathon Winner) Virtual Trading Simulator, Same Feeling & Zero Risk.", card: talentThree, tech_stack: ["reactIcon", "viteIcon", "expressjsIcon"], href: "https://tradebull-three.vercel.app/"},
         ]
     }
     
+    contacts = [
+        {title: "github", href: "https://github.com/dhruvmane"}
+    ]
     
 
 
-    function clickGithubIcon() {
-        window.location.href = "https://github.com/dhruvmane"
+    function clickContactIcon(href: string) {
+        return () => window.location.href = href
     }
 
 
@@ -172,7 +188,7 @@
             </div>
         {/if}
         {#each talents as talent}
-            <Talents title={talent.title} description={talent.description} card={talent.card} tech_stack={talent.tech_stack} />
+            <Talents href={talent.href} title={talent.title} description={talent.description} card={talent.card} tech_stack={talent.tech_stack} />
         {/each}
     </div>
 
@@ -181,6 +197,8 @@
 
     <!--Social Media / Contacts-->
     <div class="contacts-field">
-        <button class="contacts" onclick={clickGithubIcon}><img class="contacts" alt="button" src={githubIcon}></button>
+        {#each contacts as contact}
+            <button class="contacts" onclick={clickContactIcon(contact.href)}><img class="contactsIcon" alt="button" src={githubIcon}></button>
+        {/each}
     </div>
 </main>
