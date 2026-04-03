@@ -11,7 +11,7 @@ body {
     font-family: 'Cutive Mono';
     font-weight: bold;
     background: linear-gradient(180deg,rgb(39, 39, 39) 0%, rgb(20, 20, 20) 100%);
-    height: 100vh;
+    height: 100%;
     color: rgb(252, 249, 228);
 }
 

@@ -1,6 +1,10 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
 
+    :global(:root) {
+        --ui-curvature: 0px;
+    }
+
     * {
         text-align: center;
     }
@@ -8,7 +12,7 @@
     .title {
         font-size: 30px;
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 10dvh;
     }
 
     .talentCardsField {
@@ -21,44 +25,13 @@
         justify-content: center;
     }
 
-    .copyright {
-        margin: 0;
-        margin-top: 40px;
-        padding: 0;
-    }
 
-    .search-bar-field {
-        margin: 0;
-        margin-bottom: 30px;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0;
-        padding: 0;
-        padding-left: 10px;
-        height: 50px;
-        width: 500px;
-        text-align: left;
-        font-size:25px;
-
-
-        color: rgb(243, 247, 209);
-        border-color: rgb(250, 248, 215);
-        border-style: solid;
-        background-color: rgb(250, 248, 215);
-        background: none;
-        border-radius: 10px;
-    }
-
-    input::placeholder {
-        color: rgb(97, 96, 80);
-    }
 
     .contacts-field {
         margin: 0;
         padding: 0;
         margin-top: 25px;
+        padding-bottom: 7%;
     }
 
     .contacts {
@@ -92,7 +65,7 @@
     
     .notice {
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 10dvh;
         margin-left: 20px;
         text-align: left;
         color: rgb(255, 251, 217);
@@ -104,7 +77,7 @@
     
     .subtitle {
         margin: 0;
-        margin-bottom: 30vh;
+        margin-bottom: 30dvh;
         margin-top: 10px;
         margin-left: 20px;
         margin-right: 20px;
@@ -119,11 +92,26 @@
 <script lang=ts>
     import '../app.css'
     import githubIcon from '$lib/assets/icons/github.svg';
+
+    import Search from '$lib/components/Search.svelte'
+    import Navbar from '$lib/components/Navbar.svelte'
+
     import Talents from '$lib/components/Talents.svelte'
     import talentOne from '$lib/assets/talents/1.png'
     import talentTwo from '$lib/assets/talents/2.png'
     import talentThree from '$lib/assets/talents/3.png'
     
+    // Svelte onMount for GSAP (similar to useEffect in React.)
+	import { onMount } from 'svelte';
+
+    // GSAP shit
+    import { gsap } from 'gsap';
+    // import { Draggable } from 'gsap/all';
+    // import InertiaPlugin from 'gsap/InertiaPlugin';
+
+    // Register GSAP Plugins
+    // gsap.registerPlugin(InertiaPlugin)
+    // gsap.registerPlugin(Draggable)
 
     let showTalents = true;
     let talents: any = $state([])
@@ -133,7 +121,8 @@
         talents = [
             {title: "SESIM", description: "(W.I.P) a Stock Exchange Simulator.", card: talentOne, tech_stack: ["svelteIcon", "viteIcon", "expressjsIcon"], href: "https://github.com/dhruvmane/sesim"},
             {title: "GRAPIFY", description: "(W.I.P) Keep your Expenses in Check with GRAPIFY.", card: talentTwo, tech_stack: ["svelteIcon", "viteIcon", "tauriIcon", "rustIcon"], href: "https://github.com/dhruvmane/grapify"},
-            {title: "TRADEBULL", description: "(Hackathon Winner) Virtual Trading Simulator, Same Feeling & Zero Risk.", card: talentThree, tech_stack: ["reactIcon", "viteIcon", "expressjsIcon"], href: "https://tradebull-three.vercel.app/"},
+            {title: "TRADEBULL", isIconic: true, description: "(Hackathon Winner) Virtual Trading Simulator, Same Feeling & Zero Risk.", card: talentThree, tech_stack: ["reactIcon", "viteIcon", "expressjsIcon"], href: "https://tradebull-three.vercel.app/", badges: [{title: "Hackathon Winner", description: "Won the Hacktoon Hackathon organised at AIKTC, Panvel."}]},
+            {title: "Ink", description: "opensource screenwriting app & website.", card: talentThree, tech_stack: ["svelteIcon", "viteIcon", "tauriIcon", "rustIcon"], href: "https://tradebull-three.vercel.app/"},
         ]
     }
     
@@ -168,17 +157,35 @@
     // Animate Title:
     animate_typewriter('dhruv mane\'s portfolio.', 100)
     
+    let talentsRef: HTMLElement[] = [];
+
+    onMount(() => {
+        let tl = gsap.timeline({defaults:{duration: 4.5}});
+        talentsRef.forEach( (talent: any) => {
+            tl.from(talent, {
+                y: 50,
+                opacity: 0,
+                ease: "power2.inOut",
+                duration: 1.5,
+            }, "<0.1")
+        })
+
+
+    })
+    
+
 </script>
 <main>
+    <!--NAVBAR-->
+    <Navbar />
+
     <title>dhruv | Portfolio</title>
     <!--Introduction-->
     <div class="title">
         <p>{animated_title}<span class="caret">|</span></p>
     </div>
     <!--Search Bar (cuz im sigma)-->
-    <div class="search-bar-field">
-        <input class="search-bar" type="text" placeholder="🔍">
-    </div>
+    <Search />
     <!--Talents-->
     <div class="talentCardsField">
         {#if talents.length == 0}
@@ -187,8 +194,10 @@
                 <p class="subtitle">No Projects have been uploaded yet. Sorry!</p>
             </div>
         {/if}
-        {#each talents as talent}
-            <Talents href={talent.href} title={talent.title} description={talent.description} card={talent.card} tech_stack={talent.tech_stack} />
+        {#each talents as talent, i}
+            <div bind:this={talentsRef[i]}>
+                <Talents badges={talent.badges} isIconic={talent.isIconic} href={talent.href} title={talent.title} description={talent.description} card={talent.card} tech_stack={talent.tech_stack} />
+            </div>        
         {/each}
     </div>
 
