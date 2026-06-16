@@ -14,11 +14,11 @@
                     <p class="absolute right-2 bottom-2 text-3xl">🏆</p>
                {/if}
 
-               {#if project.WorkInProgress === true}
+               <!-- {#if project.WorkInProgress === true}
                     <p class="absolute right-2 bottom-2 text-3xl">🛠</p>
-               {/if}
+               {/if} -->
                
-               <h1 class="m-2 flex gap-x-1">{project.name} <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5"></h1>
+               <a class="m-2 text-3xl flex gap-x-1 hover:underline hover:cursor-pointer" target="_blank" rel="noopener noreferrer" href={project.link}>{project.name} <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5"></a>
                <p class="m-2 min-h-[100px]">{project.description}</p>
                {#each project.stack as stack}
                     <Tags label={stack}/>

@@ -5,6 +5,8 @@
      import AboutMe from '$lib/sections/AboutMe.svelte';
      import Projects from '$lib/sections/Projects.svelte';
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
+     import Music from '$lib/sections/Music.svelte';
+	import RightSidebar from '$lib/sections/RightSidebar.svelte';
 
 </script>
 
@@ -17,6 +19,10 @@
           <div class="my-10">
                <Projects />
           </div>
+          <div class="my-10">
+               <Music />
+          </div>
      </main>
-     <div class="w-1/3 h-full"></div>
+     <RightSidebar />
+
 </div>
