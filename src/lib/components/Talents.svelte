@@ -184,6 +184,7 @@
 		margin-left: 10px;
 		margin-right: 10px;
 		padding-bottom: 30px;
+		
 		text-align: center;
 		background: linear-gradient(180deg, rgb(255, 245, 225) 0%, rgb(242, 255, 182) 100%);
 		background: rgb(31, 31, 31);
@@ -232,6 +233,7 @@
 	.tech-stack:hover {
 		background-color: antiquewhite;
 		color: black;
+		border-color: antiquewhite;
 		transition: 0.2s ease-in-out;
 	}
 
