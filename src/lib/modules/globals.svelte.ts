@@ -83,33 +83,42 @@ let Projects = [
 ]
 
 // Import Music
-import angeldust from "$lib/assets/music/light@thetunnel.mp3"
+import angeldust from "$lib/assets/music/angeldust.mp3"
+import redfog from "$lib/assets/music/angeldust.mp3"
+import wherecanigo from "$lib/assets/music/angeldust.mp3"
+import aria_math from "$lib/assets/music/aria math.mp3"
+import findme from "$lib/assets/music/findme.mp3"
+
+let musicState = $state({isPlaying: false})
+let CurrentlyPlaying = $state({
+    id: null,
+    title: "title",
+    currentTimeString: "00:00",
+    durationString: "00:00",
+    duration: 0,
+    music: null as HTMLAudioElement | null,
+})
 let Music = [
      {    
+          id: 1,
           title: "angel dust.",
           duration: "02:53",
           src: angeldust
      },
      {    
-          title: "redfogghhvgsx=\\",
-          duration: "02:23",
-          src: angeldust
+          id: 4,
+          title: "aria math",
+          duration: "02:41",
+          src: aria_math
      },
      {    
-          title: "WHERE CAN I GO?",
-          duration: "04:53",
-          src: angeldust
-     },
-     {    
-          title: "SCANDAL",
-          duration: "01:51",
-          src: angeldust
-     },
-     {    
+          id: 5,
           title: "find me",
           duration: "02:33",
-          src: angeldust
+          src: findme
      }
 ]
 
-export { Talents, Projects, Music }
+
+export { Talents, Projects, }
+export { Music, CurrentlyPlaying, musicState }

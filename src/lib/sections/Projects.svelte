@@ -1,8 +1,7 @@
 <script>
-     import Tags from '$lib/sections/Tags.svelte'
+     import Tags from '$lib/components/Tags.svelte'
      import { Projects } from "$lib/modules/globals.svelte";
      import LinkSvg from '$lib/assets/icons/link.svg'
-
 
 </script>
 

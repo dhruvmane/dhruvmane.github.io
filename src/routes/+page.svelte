@@ -7,10 +7,11 @@
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
      import Music from '$lib/sections/Music.svelte';
 	import RightSidebar from '$lib/sections/RightSidebar.svelte';
+	import AudioPlayer from '$lib/components/AudioPlayer.svelte';
 
 </script>
 
-<div class="flex">
+<div class="flex" id="page">
      <LeftSidebar />
      <main class="text-white justify-self-center select-none">
           <div class="my-10">
@@ -24,5 +25,5 @@
           </div>
      </main>
      <RightSidebar />
-
+     <AudioPlayer />
 </div>

@@ -2,7 +2,7 @@
      <ul class="hidden m-20 p-10 lg:grid grid-cols-1 gap-5">
           <li><a href="#about-me" class="hover:underline">about me</a></li>
           <li><a href="#projects" class="hover:underline">projects</a></li>
-          <li><a href="#my-music" class="hover:underline">discography</a></li>
+          <li><a href="#discography" class="hover:underline">discography</a></li>
      </ul>
 </div>
      

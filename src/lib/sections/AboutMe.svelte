@@ -1,6 +1,6 @@
 <script>
      import { Talents } from "$lib/modules/globals.svelte";
-     import Tags from "$lib/sections/Tags.svelte";
+     import Tags from "$lib/components/Tags.svelte";
      import ProfilePic from '$lib/assets/icons/dhruv.jpg'
      import LinkSvg from '$lib/assets/icons/link.svg'
 
@@ -11,7 +11,7 @@
 <main class="p-10 bg-neutral-900 w-[800px] duration-300 shadow-[10px_10px_0px] shadow-black border-4 border-black select-none">
 
      <div class="flex mb-10 gap-x-10 border-4 border-black shadow-[5px_5px_0px] shadow-black">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="hover:scale-102">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="">
                <img src={ProfilePic} alt="Profile" class="m-3 size-[150px] border-4 border-black"/>
           </a>
           <div class="mt-6">
