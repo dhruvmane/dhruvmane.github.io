@@ -19,9 +19,11 @@
                
                <a class="m-2 text-3xl flex gap-x-1 hover:underline hover:cursor-pointer" target="_blank" rel="noopener noreferrer" href={project.link}>{project.name} <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5"></a>
                <p class="m-2 min-h-[100px]">{project.description}</p>
-               {#each project.stack as stack}
-                    <Tags label={stack}/>
-               {/each}
+               <div class="flex flex-wrap-reverse">
+                    {#each [...project.stack].reverse() as stack}
+                         <Tags label={stack}/>
+                    {/each}
+               </div>
           </div>
      {/each}
 </main>
