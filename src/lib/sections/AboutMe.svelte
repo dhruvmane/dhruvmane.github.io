@@ -19,7 +19,7 @@
                <p class="m-2 text-sm font-medium">I am a Computer Science Student & a Music Producer.</p>
           </div>
      </div>
-     
+
      <div class="flex flex-col gap-4">
           <div class="p-2 border-4 shadow-[5px_5px_0px] shadow-black border-black">
                <h1 class="underline m-2 text-2xl font-bold">skills.</h1>
@@ -34,9 +34,10 @@
                <div class="flex flex-wrap gap-2 p-2">
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dhruv-mane-1b4b4935b/" class="flex gap-x-0.5 hover:underline">LinkedIn</a>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="hover:underline">Github</a>
-                    <a target="_blank" rel="noopener noreferrer" href="http://instagram.com/dhruvvmh" class="hover:underline">Instagram</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/dhruvvmh" class="hover:underline">Instagram</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://x.com/dhruvvmh" class="hover:underline">X / Twitter</a>
                </div>
           </div>
-          
+
      </div>
 </main>
