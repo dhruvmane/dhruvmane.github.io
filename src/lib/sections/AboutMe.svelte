@@ -10,26 +10,26 @@
 <h1 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h1>
 <main class="p-10 bg-neutral-900 w-[800px] duration-300 shadow-[10px_10px_0px] shadow-black border-4 border-black select-none">
 
-     <div class="flex mb-10 gap-x-10 border-4 border-black shadow-[5px_5px_0px] shadow-black">
+     <div class="flex mb-5 gap-x-10 border-4 border-black shadow-[5px_5px_0px] shadow-black">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="">
                <img src={ProfilePic} alt="Profile" class="m-3 size-[150px] border-4 border-black"/>
           </a>
-          <div class="mt-6">
+          <div class="mt-6 items-center">
                <h1 class="m-2 font-bold text-5xl">Hi, I'm <a href="https://github.com/dhruvmane" class="hover:underline">dhruv</a>.</h1>
-               <p class="m-2 text-sm font-light">I am a Computer Science Student & a Music Producer.</p>
+               <p class="m-2 text-sm font-medium">I am a Computer Science Student & a Music Producer.</p>
           </div>
      </div>
      
-     <div class="flex gap-x-4">
-          <div class="p-2 border-4 shadow-[5px_5px_0px] w-1/2 shadow-black border-black">
+     <div class="flex flex-col gap-4">
+          <div class="p-2 border-4 shadow-[5px_5px_0px] shadow-black border-black">
                <h1 class="underline m-2 text-2xl font-bold">skills.</h1>
                <div class="flex flex-wrap gap-2 p-2">
                     {#each Talents as talent}
-                         <a href={talent.href} class="hover:underline hover:cursor-pointer">{talent.name}</a>
+                         <a href={talent.href} target="_blank" rel="noopener noreferrer" class="hover:underline hover:cursor-pointer">{talent.name}</a>
                     {/each}
                </div>
           </div>
-          <div class="p-2 border-4 shadow-[5px_5px_0px] w-1/2 shadow-black border-black">
+          <div class="p-2 border-4 shadow-[5px_5px_0px] shadow-black border-black">
                <h1 class="underline m-2 text-2xl font-bold flex gap-x-1">contact <img src={LinkSvg} alt="" class="invert size-5 translate-y-2"></h1>
                <div class="flex flex-wrap gap-2 p-2">
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dhruv-mane-1b4b4935b/" class="flex gap-x-0.5 hover:underline">LinkedIn</a>

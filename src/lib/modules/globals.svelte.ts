@@ -6,6 +6,9 @@ let Talents = [
      { name: "Node.js", href: "https://nodejs.org/en"},
      { name: "expressjs", href: "https://expressjs.com/"},
      { name: "fastify", href: "https://fastify.dev/"},
+     { name: "Postgres", href: "https://www.postgresql.org/"},
+     { name: "drizzle-orm", href: "https://orm.drizzle.team/"},
+     { name: "prisma-orm", href: "https://www.prisma.io/docs/orm"},
      { name: "React/PReact/NextJS", href: "https://react.dev/"},
      { name: "Svelte/Sveltekit", href: "https://svelte.dev/"},
      { name: "Electron", href: "https://www.electronjs.org/"},
@@ -36,50 +39,16 @@ let Projects = [
      },
      {
           WorkInProgress: true,
-          name: "Yomu",
-          link: "https://github.com/dhruvmane/yomu",
-          description: "opensource content cafe for anime & comics.",
+          name: "Mangase",
+          link: "https://github.com/the-mangase-group/website",
+          description: "Revolutionizing Digital Mangas.",
           stack: [
-               "Typescript",
+               "Typescript", "fastify",
+               "POSTGRES-SQL", "DRIZZLE-ORM",
                "HTML", "CSS",
-               "Sveltekit", "Electron"
+               "Sveltekit"
           ]
      },
-     {
-          WorkInProgress: true,
-          name: "Stella",
-          link: "https://github.com/dhruvmane/stella",
-          description: "a bookreading app.",
-          stack: [
-               "Typescript",
-               "HTML", "CSS",
-               "Sveltekit", "Electron"
-          ]
-     },
-     {
-          WorkInProgress: true,
-          name: "Ink",
-          link: "https://github.com/dhruvmane/ink",
-          description: "Free & OpenSource Screenwriting App.",
-          stack: [
-               "Typescript",
-               "HTML", "CSS",
-               "Sveltekit", "Electron"
-          ]
-     },
-     {
-          WorkInProgress: true,
-          name: "Grapify",
-          link: "https://github.com/dhruvmane/grapify",
-          description: "Free Budgeting App.",
-          stack: [
-               "Typescript",
-               "HTML", "CSS",
-               "Sveltekit", "Electron"
-          ]
-     },
-     
-     
 ]
 
 // Import Music
