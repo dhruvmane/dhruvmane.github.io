@@ -1,16 +1,16 @@
 let Talents = [
-     "Typescript",
-     "Javascript",
-     "HTML",
-     "CSS",
-     "Rust",
-     "Node.js",
-     "express.js",
-     "React",
-     "Svelte/Sveltekit",
-     "Electron",
-     "Tauri",
-     "FL Studio"
+     { name: "Typescript", href: "https://www.typescriptlang.org/"},
+     { name: "Javascript", href: "/"},
+     { name: "HTML", href: "/"},
+     { name: "CSS", href: "/"},
+     { name: "Node.js", href: "https://nodejs.org/en"},
+     { name: "expressjs", href: "https://expressjs.com/"},
+     { name: "fastify", href: "https://fastify.dev/"},
+     { name: "React/PReact/NextJS", href: "https://react.dev/"},
+     { name: "Svelte/Sveltekit", href: "https://svelte.dev/"},
+     { name: "Electron", href: "https://www.electronjs.org/"},
+     { name: "Tauri", href: "https://v2.tauri.app/"},
+     { name: "FL Studio", href: "https://www.image-line.com/"},
 ]
 
 let Projects = [

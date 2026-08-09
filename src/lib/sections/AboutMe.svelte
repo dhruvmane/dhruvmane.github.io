@@ -25,7 +25,7 @@
                <h1 class="underline m-2 text-2xl font-bold">skills.</h1>
                <div class="flex flex-wrap gap-2 p-2">
                     {#each Talents as talent}
-                         <p class="hover:underline hover:cursor-pointer">{talent}</p>
+                         <a href={talent.href} class="hover:underline hover:cursor-pointer">{talent.name}</a>
                     {/each}
                </div>
           </div>

@@ -11,6 +11,10 @@
 
 </script>
 
+<svelte:head>
+     <title>dhruv.</title>
+</svelte:head>
+
 <div class="flex" id="page">
      <LeftSidebar />
      <main class="text-white justify-self-center select-none">
