@@ -33,8 +33,10 @@ let Talents = {
         { name: "expressjs", href: "https://expressjs.com/", icon: { name: "lineicons:expressjs" }},
         { name: "fastify", href: "https://fastify.dev/", icon: { name: "devicon-plain:fastify" }},
         { name: "Node.js", href: "https://nodejs.org/en", icon: { name: "bxl:nodejs" }},
-        { name: "PostgreSQL", href: "https://www.postgresql.org/", icon: { name: "cib:postgresql" }},
         { name: "drizzle-orm", href: "https://orm.drizzle.team/", icon: { name: "bxl:drizzle-orm" }},
+        { name: "PostgreSQL", href: "https://www.postgresql.org/", icon: { name: "cib:postgresql" }},
+        { name: "MongoDB", href: "https://www.mongodb.com/", icon: { name: "bxl:mongodb" }},
+        { name: "Redis", href: "https://redis.io/", icon: { name: "devicon-plain:redis" }},
     ],
     misc: [
         { name: "FL Studio", href: "https://www.image-line.com/", icon: { name: "arcticons:fl-studio-mobile" }},
