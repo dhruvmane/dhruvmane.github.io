@@ -1,16 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
-@font-face {
-    font-family: 'Google Sans Bold';
-    src: url('./lib/fonts/GoogleSansBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@theme {
+    --font-title: 'Jakarta Sans Regular';
+    --font-ui: 'Jakarta Sans Regular';
+    --font-content: 'DM Sans';
+
+    --color-main: #171717;
+}
+
+@layer {
+    .page {
+        h1 {
+            @apply font-title;
+        }
+
+        a, p {
+            @apply font-content;
+        }
+    }
+
+    .wallpaper {
+        background-color: #0A0A0A;
+        opacity: 1;
+        background-image: radial-gradient(#141414 1.2000000000000002px, #0A0A0A 1.2000000000000002px);
+        background-size: 12px 12px;
+    }
+
+    .comic-design {
+        @apply border-4 shadow-[5px_5px_0px] shadow-black border-black;
+    }
 }
 
 body {
     height: 100%;
-    @apply bg-[#0A0A0A];
+    
+    background-color: #0A0A0A;
+    opacity: 1;
+    background-image:  radial-gradient(circle at 9px 100%, transparent 8px, #141414 8px, #141414 9px, transparent 9px), radial-gradient(circle at 9px 0%, transparent 8px, #141414 8px, #141414 9px, transparent 9px);
+    background-size: 18px 9px;
+    background-position: 0 0, 9px 0;
 }
 
 html {
@@ -20,4 +49,22 @@ html {
 /* Hide Scrollbar */
 body::-webkit-scrollbar {
     display: none;
+}
+
+@font-face {
+    font-family: 'Google Sans Bold';
+    src: url('./lib/fonts/GoogleSansBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jakarta Sans Regular';
+    src: url("./lib/assets/fonts/PlusJakartaSans-Regular.ttf")
+}
+
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("./lib/assets/fonts/DMSans-Regular.ttf")
 }

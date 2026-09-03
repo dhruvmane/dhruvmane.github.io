@@ -1,9 +1,9 @@
-<script lang=ts>
+<script lang="ts">
 
      import Spotify from '$lib/assets/icons/spotify1.svg'
      import ProfilePic from '$lib/assets/icons/dhruv.jpg'
      import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
-	import { onMount } from 'svelte';
+     import { onMount } from 'svelte';
      
      
      let _currentlyPlaying: any = $state({
@@ -100,11 +100,11 @@
 
 </script>
 
-<h1 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h1>
-<div class="w-[800px] min-h-[500px] border-4 border-black shadow-[10px_10px_0px] shadow-black bg-neutral-900">
+<h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2>
+<div class="border-4 border-black shadow-[10px_10px_0px] shadow-black bg-neutral-900">
      <div class="justify-items-center my-10 w-full">
           
-          <div class="min-w-[400px] justify-self-center flex bg-neutral-950 shadow-[4px_4px_0px] shadow-neutral-700 p-3">
+          <div class="justify-self-center flex bg-neutral-950 shadow-[4px_4px_0px] shadow-neutral-700 p-3">
                <img src={ProfilePic} alt="cover" class="justify-self-start size-[150px] border-4 border-black">
                <div class="mx-2 my-3">
                     <p class="text-sm italic text-neutral-600 font-light">my discography</p>

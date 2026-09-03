@@ -190,8 +190,7 @@
 		background: rgb(31, 31, 31);
 
 		width: 350px;
-		height: 350px;
-
+		height: fit-content;
 		border-style: solid;
 		border-color: var(--border-color);
 		border-radius: var(--ui-curvature);

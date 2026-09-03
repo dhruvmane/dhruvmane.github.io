@@ -1,30 +1,48 @@
-let Talents = [
-     { name: "Typescript", href: "https://www.typescriptlang.org/"},
-     { name: "Javascript", href: "/"},
-     { name: "HTML", href: "/"},
-     { name: "CSS", href: "/"},
-     { name: "Node.js", href: "https://nodejs.org/en"},
-     { name: "expressjs", href: "https://expressjs.com/"},
-     { name: "fastify", href: "https://fastify.dev/"},
-     { name: "Postgres", href: "https://www.postgresql.org/"},
-     { name: "drizzle-orm", href: "https://orm.drizzle.team/"},
-     { name: "prisma-orm", href: "https://www.prisma.io/docs/orm"},
-     { name: "React/PReact/NextJS", href: "https://react.dev/"},
-     { name: "Svelte/Sveltekit", href: "https://svelte.dev/"},
-     { name: "Electron", href: "https://www.electronjs.org/"},
-     { name: "Tauri", href: "https://v2.tauri.app/"},
-     { name: "FL Studio", href: "https://www.image-line.com/"},
-]
+let Talents = { 
+    languages: [
+        { name: "Rust", href: "https://rust-lang.org/", icon: { name: "fa7-brands:rust" }},
+        { name: "HTML", href: "/", icon: { name: "flowbite:html-solid" }},
+        { name: "CSS", href: "/", icon: { name: "flowbite:css-solid" }},
+        { name: "Go", href: "https://go.dev/", icon: { name: "fa6-brands:golang" }},
+        { name: "Typescript", href: "https://www.typescriptlang.org/", icon: { name: "bxl:typescript" } },
+        { name: "Javascript", href: "/", icon: { name: "bxl:javascript" }},
+    ],
+    frameworks: [
+        { name: "React/PReact/NextJS", href: "https://react.dev/", icon: { name: "bxl:react" }},
+        { name: "Svelte/Sveltekit", href: "https://svelte.dev/", icon: { name: "bxl:svelte" }},
+        { name: "SolidJS", href: "https://www.solidjs.com/", icon: { name: "devicon:solidjs" }},
+        { name: "Electron", href: "https://www.electronjs.org/", icon: { name: "cib:electron" }},
+        { name: "Tauri", href: "https://v2.tauri.app/", icon: { name: "devicon-plain:tauri" }},
+    ],
+    packages: [
+        { name: "git", href: "https://git-scm.com/", icon: { name: "bi:git" }},
+        { name: "expressjs", href: "https://expressjs.com/", icon: { name: "lineicons:expressjs" }},
+        { name: "fastify", href: "https://fastify.dev/", icon: { name: "devicon-plain:fastify" }},
+        { name: "Node.js", href: "https://nodejs.org/en", icon: { name: "bxl:nodejs" }},
+        { name: "PostgreSQL", href: "https://www.postgresql.org/", icon: { name: "cib:postgresql" }},
+        { name: "drizzle-orm", href: "https://orm.drizzle.team/", icon: { name: "bxl:drizzle-orm" }},
+    ],
+    misc: [
+        { name: "FL Studio", href: "https://www.image-line.com/", icon: { name: "arcticons:fl-studio-mobile" }},
+    ],
+}
 
 let Projects = [
      {
-          HackathonWinner: true,
-          name: "TradeBull",
-          link: "https://tradebull-three.vercel.app/",
-          description: "a Virtual Trading Simulator, Same Feeling & Zero Risk.",
-          stack: [
+        HackathonWinner: true,
+        HackathonInfo: {
+            name: "Hacktoon 2026",
+            host: {
+                name: "AIKTC",
+                href: "https://aiktc.ac.in/"
+            }
+        }, 
+        name: "TradeBull",
+        link: "https://tradebull-three.vercel.app/",
+        description: "a Virtual Trading Simulator, Same Feeling & Zero Risk.",
+        stack: [
                "React", "Vite", "express.js"
-          ]
+        ]
      },
      {
           WorkInProgress: true,
@@ -44,7 +62,7 @@ let Projects = [
           description: "Revolutionizing Digital Mangas.",
           stack: [
                "Typescript", "fastify",
-               "POSTGRES-SQL", "DRIZZLE-ORM",
+               "PostgresSQL", "drizzle",
                "HTML", "CSS",
                "Sveltekit"
           ]
