@@ -7,6 +7,9 @@
     --font-content: 'DM Sans';
 
     --color-main: #171717;
+
+    --duration-ui: 500ms;
+    --duration-ui-slow: 1000ms;
 }
 
 @layer {

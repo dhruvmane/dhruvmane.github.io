@@ -2,13 +2,23 @@
      import Tags from '$lib/components/Tags.svelte'
      import { Projects } from "$lib/modules/globals.svelte";
      import LinkSvg from '$lib/assets/icons/link.svg'
+     import Icon from '@iconify/svelte';
 
 </script>
 
-<h2 id="projects" class="text-3xl font-bold lowercase my-5">Projects <span class="text-neutral-700">——————————————————————</span></h2>
+<div id="projects" class="font-title -translate-x-7.5 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+    <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-xl items-center flex">
+        <Icon icon="grommet-icons:projects"/>
+    </span>
+    <span class="-translate-y-1">
+        projects
+    </span>
+</div>
+
+<!-- <h2 id="projects" class="text-3xl font-bold lowercase my-5">Projects <span class="text-neutral-700">——————————————————————</span></h2> -->
 <main class="grid grid-cols-3 w-200 gap-4 ">
      {#each Projects as project}
-          <div class="relative flex flex-col w-65 h-full bg-neutral-900 p-4 border-4 border-black shadow-[4px_4px_0px] shadow-black">
+          <div class="relative flex flex-col w-65 h-full p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
                <a class="text-3xl flex gap-x-1 hover:underline hover:cursor-pointer" target="_blank" rel="noopener noreferrer" href={project.link}>
                    {project.name} 
                    <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5">

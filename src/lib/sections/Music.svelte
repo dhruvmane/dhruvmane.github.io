@@ -3,7 +3,7 @@
      import Spotify from '$lib/assets/icons/spotify1.svg'
      import ProfilePic from '$lib/assets/icons/dhruv.jpg'
      import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
-     import { onMount } from 'svelte';
+     import Icon from '@iconify/svelte';
      
      
      let _currentlyPlaying: any = $state({
@@ -100,12 +100,21 @@
 
 </script>
 
-<h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2>
-<div class="border-4 border-black shadow-[10px_10px_0px] shadow-black bg-neutral-900">
+<div id="projects" class="font-title -translate-x-10 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+    <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
+        <Icon icon="ant-design:spotify-filled"/>
+    </span>
+    <span class="">
+        discography
+    </span>
+</div>
+
+<!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
+<div class="">
      <div class="justify-items-center my-10 w-full">
           
-          <div class="justify-self-center flex bg-neutral-950 shadow-[4px_4px_0px] shadow-neutral-700 p-3">
-               <img src={ProfilePic} alt="cover" class="justify-self-start size-[150px] border-4 border-black">
+          <div class="justify-self-center flex p-3">
+               <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
                <div class="mx-2 my-3">
                     <p class="text-sm italic text-neutral-600 font-light">my discography</p>
                     <h1 class="text-2xl text-neutral-600 font-light">currently playing..</h1>
@@ -131,8 +140,8 @@
                {#each Music as music}
                     <button
                          onclick={() => {toggleMusic(music.id)}} 
-                         class="min-w-[400px] text-left lowercase grid grid-cols-3 bg-neutral-800 p-2 px-5 shadow-[4px_4px_0px] shadow-neutral-700 hover:bg-neutral-700 hover:shadow-neutral-800 hover:cursor-pointer"
-                    >{music.title} <span class="text-center">——</span> <span class="text-right">{music.duration}</span>
+                         class="min-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-ui hover:cursor-pointer"
+                    >{music.title} <span class="text-center">—</span> <span class="text-right">{music.duration}</span>
                     </button>
                     <audio id={"music-"+ music.id} src={music.src}></audio>
                {/each}
