@@ -96,9 +96,9 @@
 
 </script>
 
-<div id="discography" class="p-10 w-120 md:w-200 duration-300 select-none">
+<div id="discography" class="group p-10 w-120 md:w-200 duration-300 select-none">
     
-    <div class="font-title -translate-x-10 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+    <div class="font-title -translate-x-10 group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
         <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
             <Icon icon="ant-design:spotify-filled"/>
         </span>

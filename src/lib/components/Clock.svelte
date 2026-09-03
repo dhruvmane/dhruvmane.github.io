@@ -14,7 +14,7 @@
         let am_pm = time.getHours() < 12 ? "AM" : "PM"
 
         let date = time.getDate();
-        let day = Day[date];    // SUNDAY, MONDAY, ETC..
+        let day = Day[time.getDay()];    // SUNDAY, MONDAY, ETC..
         let month = Month[time.getMonth()]
         let year = time.getFullYear()
 

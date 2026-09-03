@@ -9,7 +9,7 @@
 
 <!-- Personal Information -->
 <!-- <h2 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h2> -->
-<main id="about-me" class="p-10 md:w-200 duration-300 select-none">
+<main id="about-me" class="group p-10 md:w-200 duration-300 select-none">
     
     <!-- INTRODUCTION -->
      <div class="flex md:flex mb-10 gap-x-10">
@@ -33,7 +33,16 @@
 
      <div class="flex flex-col gap-4">
           <div class="p-4">
-               <h1 class="text-2xl font-bold">skills</h1>
+
+              <div class="font-title md:-translate-x-7.5 md:group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-1">
+                  <span class="md:opacity-0 animate-spin group-hover:opacity-100 transition-all duration-500 text-2xl items-center flex">
+                      <Icon icon="akar-icons:gear"/>
+                  </span>
+                  <span class="-translate-y-1">
+                      skills
+                  </span>
+              </div>
+              
                <div class="flex flex-wrap gap-2 pt-4">
                    <!-- LANGUAGES -->
                    <div class="flex flex-col w-full my-2.5">

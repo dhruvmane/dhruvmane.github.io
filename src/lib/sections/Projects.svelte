@@ -6,9 +6,9 @@
 
 </script>
 
-<div id="projects" class="py-5 w-120 md:w-200 p-10">
+<div id="projects" class="group py-5 w-120 md:w-200 p-10">
     
-    <div class="font-title md:-translate-x-7.5 md:hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+    <div class="font-title md:-translate-x-7.5 md:group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
         <span class="md:opacity-0 group-hover:opacity-100 transition-all duration-500 text-xl items-center flex">
             <Icon icon="grommet-icons:projects"/>
         </span>

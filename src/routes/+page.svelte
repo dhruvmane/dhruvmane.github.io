@@ -5,7 +5,7 @@
      import AboutMe from '$lib/sections/AboutMe.svelte';
      import Projects from '$lib/sections/Projects.svelte';
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
-     import Music from '$lib/sections/Music.svelte';
+     import Discography from '$lib/sections/Discography.svelte';
      import RightSidebar from '$lib/sections/RightSidebar.svelte';
      import AudioPlayer from '$lib/components/AudioPlayer.svelte';
      import Notice from '$lib/sections/Notice.svelte';
@@ -29,9 +29,9 @@
             <Projects />
         </div>
         <div class="my-10">
-            <Music />
+            <Discography />
         </div>
      </main>
      <RightSidebar />
-     <AudioPlayer />
+     <!-- <AudioPlayer /> -->
 </div>
