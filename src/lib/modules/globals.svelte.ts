@@ -3,7 +3,7 @@ export const details = {
 }
 
 export const Links = [
-    { name: "Spotify", href: "#", icon: {name: "ant-design:spotify-filled"}},
+    { name: "Spotify", href: "https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ", icon: {name: "ant-design:spotify-filled"}},
     { name: "LinkedIn", href: "https://www.linkedin.com/in/dhruv-mane-1b4b4935b/", icon: {name: "akar-icons:linkedin-box-fill"}},
     { name: "Github", href: "https://github.com/dhruvmane", icon: {name: "akar-icons:github-fill"}},
     { name: "Instagram", href: "https://instagram.com/dhruvvmh", icon: {name: "akar-icons:instagram-fill"}},
