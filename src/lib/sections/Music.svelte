@@ -100,57 +100,58 @@
 
 </script>
 
-<div id="projects" class="font-title -translate-x-10 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
-    <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
-        <Icon icon="ant-design:spotify-filled"/>
-    </span>
-    <span class="">
-        discography
-    </span>
-</div>
-
-<!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
-<div class="">
-     <div class="justify-items-center my-10 w-full">
-          
-          <div class="justify-self-center flex p-3">
-               <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
-               <div class="mx-2 my-3">
-                    <p class="text-sm italic text-neutral-600 font-light">my discography</p>
-                    <h1 class="text-2xl text-neutral-600 font-light">currently playing..</h1>
-                    <h1 class="text-4xl font-black lowercase">{_currentlyPlaying.title}</h1>
-                    <div class="flex">
-                         <p>{_currentlyPlaying.currentTimeString} —— {_currentlyPlaying.durationString}</p>
-                    </div>
-               </div>
-          </div>
-          
-          <!-- Music Discography Icons -->
-          <div class="justify-self-center flex gap-x-10">
-               <!-- Spotify Link -->
-               <a target="_blank" rel="noopener noreferrer" class="flex" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ?si=72820b49ebe247f9">
-                    <img alt="spotify" src={Spotify} class="size-[100px]">
-               </a>
-               
-               <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
-          </div>
-          
-               
-          <div class="flex flex-col text-left gap-y-2">
-               {#each Music as music}
-                    <button
-                         onclick={() => {toggleMusic(music.id)}} 
-                         class="min-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-ui hover:cursor-pointer"
-                    >{music.title} <span class="text-center">—</span> <span class="text-right">{music.duration}</span>
-                    </button>
-                    <audio id={"music-"+ music.id} src={music.src}></audio>
-               {/each}
-          </div>
-
-          <div>
-               ...
-          </div>
-
-     </div>
-
+<div id="discography" class="py-5">
+    
+    <div class="font-title -translate-x-10 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+        <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
+            <Icon icon="ant-design:spotify-filled"/>
+        </span>
+        <span class="">
+            discography
+        </span>
+    </div>
+    
+    <!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
+    <div class="">
+         <div class="my-10 w-full">
+              
+              <div class="flex p-3">
+                   <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
+                   <div class="mx-2 my-3">
+                        <p class="text-sm italic text-neutral-600 font-light">my discography</p>
+                        <h1 class="text-2xl text-neutral-600 font-light">currently playing..</h1>
+                        <h1 class="text-4xl font-black lowercase">{_currentlyPlaying.title}</h1>
+                        <div class="flex">
+                             <p>{_currentlyPlaying.currentTimeString} —— {_currentlyPlaying.durationString}</p>
+                        </div>
+                   </div>
+              </div>
+              
+              <!-- Music Discography Icons -->
+              <div class="flex gap-x-10">
+                   <!-- Spotify Link -->
+                   <a target="_blank" rel="noopener noreferrer" class="flex" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ?si=72820b49ebe247f9">
+                        <img alt="spotify" src={Spotify} class="size-[100px]">
+                   </a>
+                   
+                   <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
+              </div>
+              
+                   
+              <div class="flex flex-col text-left gap-y-2">
+                   {#each Music as music}
+                        <button
+                             onclick={() => {toggleMusic(music.id)}} 
+                             class="max-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
+                        >
+                            <span class="text-ellipsis">{music.title}</span>
+                            <span class="text-center">—</span>
+                            <span class="text-right">{music.duration}</span>
+                        </button>
+                        <audio id={"music-"+ music.id} src={music.src}></audio>
+                   {/each}
+              </div>
+         </div>
+    
+    </div>
 </div>

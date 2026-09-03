@@ -8,7 +8,7 @@
 
 <!-- Personal Information -->
 <!-- <h2 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h2> -->
-<main class="p-10 w-200 duration-300 select-none">
+<main id="about-me"  class="p-10 w-200 duration-300 select-none">
 
     <!-- INTRODUCTION -->
      <div class="flex mb-5 gap-x-10">

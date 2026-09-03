@@ -1,0 +1,1 @@
+<main class="w-full h-100"></main>
