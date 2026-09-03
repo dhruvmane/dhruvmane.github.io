@@ -1,15 +1,13 @@
 <script>
-     import { Talents, Links } from "$lib/modules/globals.svelte";
+     import { Talents, Links, details } from "$lib/modules/globals.svelte";
      import ProfilePic from '$lib/assets/icons/dhruv.jpg'
-     import LinkSvg from '$lib/assets/icons/link.svg'
-     import Clock from '$lib/components/Clock.svelte'
      import Icon from '@iconify/svelte'
      
 </script>
 
 <!-- Personal Information -->
 <!-- <h2 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h2> -->
-<main id="about-me" class="group p-10 md:w-200 duration-300 select-none">
+<main id="about-me" class="group p-10 md:w-200 duration-300 ">
     
     <!-- INTRODUCTION -->
      <div class="flex md:flex mb-10 gap-x-10">
@@ -19,7 +17,7 @@
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
                <div class="w-50 md:w-full flex flex-col p-2">
                    <h1 class="font-bold text-4xl md:text-6xl">Hi, I'm <a href="https://github.com/dhruvmane">dhruv</a>.</h1>
-                   <p  class="flex-1 text-sm font-medium my-5 md:my-0">I am a Computer Science Student & a Music Producer.</p>
+                   <p  class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
                </div>
                <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">
                     {#each Links as link}

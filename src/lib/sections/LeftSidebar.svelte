@@ -46,12 +46,12 @@
         <a class="hover:underline" href="https://svelte.dev/" rel="noopener noreferrer" target="_blank">Sveltekit</a>. 
     </h2>
     
-    <details class="absolute mx-30 w-40 text-[12px] font-mono hover:cursor-pointer hover:scale-105 duration-500">
+    <details class="absolute mx-30 w-40 text-[12px] font-mono hover:cursor-pointer duration-500">
         <summary class="flex items-center gap-2">
             <h2 class="translate-y-0.5 font-mono">No AI</h2>
             <Icon icon="fluent-mdl2:navigate-external-inline"/>
         </summary>
-        No AI-Generation/AI-Generated code is incorporated in the website.
+        No AI-Generation/AI-Generated code is incorporated in this website.
     </details>
     
 </div>

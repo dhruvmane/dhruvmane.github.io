@@ -1,3 +1,7 @@
+export const details = {
+    desc: "I am a Computer Science Student (excalidraw lover) & a Music Producer."
+}
+
 export const Links = [
     { name: "Spotify", href: "#", icon: {name: "ant-design:spotify-filled"}},
     { name: "LinkedIn", href: "https://www.linkedin.com/in/dhruv-mane-1b4b4935b/", icon: {name: "akar-icons:linkedin-box-fill"}},
@@ -16,23 +20,33 @@ let Talents = {
         { name: "Python", href: "https://www.python.org/", icon: { name: "akar-icons:python-fill" }},
         { name: "C", href: "#", icon: { name: "devicon:c" }},
         { name: "C#", href: "#", icon: { name: "devicon-plain:csharp" }},
+        { name: "Java", href: "https://java.com/", icon: { name: "bxl:java" }},
         { name: "Typescript", href: "https://www.typescriptlang.org/", icon: { name: "bxl:typescript" } },
         { name: "Javascript", href: "#", icon: { name: "bxl:javascript" }},
     ],
     frameworks: [
-        { name: "React/PReact/NextJS", href: "https://react.dev/", icon: { name: "bxl:react" }},
+        { name: "React/NextJS", href: "https://react.dev/", icon: { name: "bxl:react" }},
+        { name: "Preact", href: "https://preactjs.com/", icon: { name: "vscode-icons:file-type-preact" }},
         { name: "Svelte/Sveltekit", href: "https://svelte.dev/", icon: { name: "bxl:svelte" }},
+        { name: "Qwik", href: "https://qwik.dev/", icon: { name: "devicon-plain:qwik" }},
+        { name: "Astro", href: "https://astro.build/", icon: { name: "devicon-plain:astro" }},
         { name: "SolidJS", href: "https://www.solidjs.com/", icon: { name: "devicon:solidjs" }},
         { name: "Electron", href: "https://www.electronjs.org/", icon: { name: "cib:electron" }},
+        { name: "Electrobun", href: "https://blackboard.sh/electrobun/", icon: { name: "devicon:bun" }},
+        { name: "Deno Desktop", href: "https://docs.deno.com/runtime/desktop/", icon: { name: "bxl:deno" }},
         { name: "Tauri", href: "https://v2.tauri.app/", icon: { name: "devicon-plain:tauri" }},
+        { name: "Capacitor", href: "https://capacitorjs.com/", icon: { name: "devicon:capacitor" }},
+        { name: "React Native", href: "https://reactnative.dev/", icon: { name: "bxl:react" }},
     ],
     packages: [
         { name: "git", href: "https://git-scm.com/", icon: { name: "bi:git" }},
         { name: "Github Actions", href: "#", icon: { name: "thesvg:github-actions" }},
         { name: "Docker", href: "#", icon: { name: "bxl:docker" }},
-        { name: "expressjs", href: "https://expressjs.com/", icon: { name: "lineicons:expressjs" }},
+        { name: "express", href: "https://expressjs.com/", icon: { name: "lineicons:expressjs" }},
         { name: "fastify", href: "https://fastify.dev/", icon: { name: "devicon-plain:fastify" }},
         { name: "Node.js", href: "https://nodejs.org/en", icon: { name: "bxl:nodejs" }},
+        { name: "Bun", href: "https://bun.sh/", icon: { name: "devicon:bun" }},
+        { name: "Deno", href: "https://deno.com/", icon: { name: "bxl:deno" }},
         { name: "drizzle-orm", href: "https://orm.drizzle.team/", icon: { name: "bxl:drizzle-orm" }},
         { name: "PostgreSQL", href: "https://www.postgresql.org/", icon: { name: "cib:postgresql" }},
         { name: "MongoDB", href: "https://www.mongodb.com/", icon: { name: "bxl:mongodb" }},

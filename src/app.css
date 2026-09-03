@@ -79,3 +79,8 @@ html {
     font-family: 'DM Sans';
     src: url("./lib/assets/fonts/DMSans-Regular.ttf")
 }
+
+::selection {
+    background: white;
+    color: black;
+}
