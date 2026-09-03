@@ -8,26 +8,29 @@
      import Music from '$lib/sections/Music.svelte';
      import RightSidebar from '$lib/sections/RightSidebar.svelte';
      import AudioPlayer from '$lib/components/AudioPlayer.svelte';
-
+     import Notice from '$lib/sections/Notice.svelte';
+     import Clock from '$lib/components/Clock.svelte'
      
 </script>
 
 <svelte:head>
-     <title>dhruv.</title>
+     <title>dhruv - my portfolio</title>
 </svelte:head>
 
 <div class="flex" id="page">
+    
      <LeftSidebar />
      <main class="text-white justify-self-center select-none">
-          <div class="my-10">
-               <AboutMe />
-          </div>
-          <div class="my-10">
-               <Projects />
-          </div>
-          <div class="my-10">
-               <Music />
-          </div>
+         
+         <div class="my-10">
+            <AboutMe />
+        </div>
+        <div class="my-10">
+            <Projects />
+        </div>
+        <div class="my-10">
+            <Music />
+        </div>
      </main>
      <RightSidebar />
      <AudioPlayer />

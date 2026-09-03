@@ -1,36 +1,32 @@
 <script>
-     import { Talents } from "$lib/modules/globals.svelte";
+     import { Talents, Links } from "$lib/modules/globals.svelte";
      import ProfilePic from '$lib/assets/icons/dhruv.jpg'
      import LinkSvg from '$lib/assets/icons/link.svg'
+     import Clock from '$lib/components/Clock.svelte'
      import Icon from '@iconify/svelte'
      
 </script>
 
 <!-- Personal Information -->
 <!-- <h2 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h2> -->
-<main id="about-me"  class="p-10 w-200 duration-300 select-none">
-
+<main id="about-me" class="p-10 md:w-200 duration-300 select-none">
+    
     <!-- INTRODUCTION -->
-     <div class="flex mb-5 gap-x-10">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="">
-               <img src={ProfilePic} alt="Profile" class="m-3 size-37.5 border-4 border-black"/>
+     <div class="flex md:flex mb-10 gap-x-10">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
+               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 size-40 md:size-40 border-4 border-black"/>
           </a>
-          <div class="mt-6 items-center">
-               <h1 class="m-2 font-bold text-5xl">Hi, I'm <a href="https://github.com/dhruvmane" class="hover:underline">dhruv</a>.</h1>
-               <p class="m-2 text-sm font-medium">I am a Computer Science Student & a Music Producer.</p>
-               <div class="flex flex-wrap gap-2.5 p-2 text-2xl">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dhruv-mane-1b4b4935b/" class="flex gap-x-0.5 hover:underline hover:scale-105 duration-200">
-                        <Icon icon="akar-icons:linkedin-box-fill"/>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="hover:scale-105 duration-200 hover:underline">
-                        <Icon icon="akar-icons:github-fill"/>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/dhruvvmh" class="hover:scale-105 duration-200 hover:underline">
-                        <Icon icon="akar-icons:instagram-fill"/>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://x.com/dhruvvmh" class="hover:scale-105 duration-200 hover:underline">
-                        <Icon icon="bi:twitter-x"/>
-                    </a>
+          <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
+               <div class="w-50 md:w-full flex flex-col p-2">
+                   <h1 class="font-bold text-4xl md:text-6xl">Hi, I'm <a href="https://github.com/dhruvmane">dhruv</a>.</h1>
+                   <p  class="flex-1 text-sm font-medium my-5 md:my-0">I am a Computer Science Student & a Music Producer.</p>
+               </div>
+               <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">
+                    {#each Links as link}
+                        <a target="_blank" rel="noopener noreferrer" href={link.href} class="flex gap-x-0.5 hover:underline hover:scale-105 duration-200">
+                            <Icon icon={link.icon.name}/>
+                        </a>
+                    {/each}
                </div>
           </div>
      </div>
@@ -41,8 +37,8 @@
                <div class="flex flex-wrap gap-2 pt-4">
                    <!-- LANGUAGES -->
                    <div class="flex flex-col w-full my-2.5">
-                       <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-black bg-main">languages</h1>
-                       <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5">
+                       <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">languages</h1>
+                       <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
                            {#each Talents.languages as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>
@@ -54,8 +50,8 @@
 
                     <!-- FRAMEWORKS -->
                     <div class="flex flex-col w-full my-2.5">
-                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-black bg-main">frameworks</h1>
-                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5 px-2.5">
+                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">frameworks</h1>
+                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
                             {#each Talents.frameworks as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
@@ -67,8 +63,8 @@
 
                     <!-- PACKAGES -->
                     <div class="flex flex-col w-full my-2.5">
-                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-black bg-main">tech</h1>
-                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5 px-2.5">
+                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">tech</h1>
+                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
                             {#each Talents.packages as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
@@ -80,8 +76,8 @@
                      
                     <!-- MISC -->
                     <div class="flex flex-col w-full my-2.5">
-                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-black bg-main">miscellaneous</h1>
-                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5 px-2.5">
+                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">miscellaneous</h1>
+                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
                             {#each Talents.misc as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>

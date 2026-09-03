@@ -5,25 +5,19 @@
      import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
      import Icon from '@iconify/svelte';
      
-     
      let _currentlyPlaying: any = $state({
           title: "title",
           currentTimeString: "00:00",
           durationString: "00:00"
      })
-
      
-     let newAudio: HTMLAudioElement | null;
-     let oldAudio: HTMLAudioElement | null;
-     let volume = $state(50);
-
      let musicCurrentTime = $state(0)
+     let newAudio: HTMLAudioElement, oldAudio: HTMLAudioElement;
      
-     function toggleMusic(id: number) {
+     export async function toggleMusic(id: number, oldAudio: HTMLAudioElement, newAudio: HTMLAudioElement) {
           let music = Music.find(music => music.id === id)
           oldAudio = document.getElementById(`music-${_currentlyPlaying.id}`) as HTMLAudioElement
           newAudio = document.getElementById(`music-${id}`) as HTMLAudioElement
-          
           
           if (music) {
                
@@ -40,7 +34,7 @@
                // Toggle Playing.
                if (!musicState.isPlaying) {
                     musicState.isPlaying = true
-
+     
                } else {
                     
                     // If clicked on another music, play that.
@@ -50,31 +44,31 @@
                     } else {
                          newAudio.pause()
                          console.log("Paused music.")
-
+     
                          musicState.isPlaying = false
                          return
                     }
                }
-
+     
                let _CurrentlyPlaying = CurrentlyPlaying
                _currentlyPlaying = newAudio
                
-
+     
                CurrentlyPlaying.title = music.title
                CurrentlyPlaying.music = newAudio
                CurrentlyPlaying.duration = newAudio.duration
-
+     
                _currentlyPlaying = music
                _currentlyPlaying.music = newAudio
                _currentlyPlaying.duration = newAudio.duration
-
-
+     
+     
                // Calculate minutes and seconds
                const dur_minutes = Math.floor(_currentlyPlaying.duration / 60);
                const dur_seconds = Math.floor(_currentlyPlaying.duration % 60);
                _currentlyPlaying.durationString = `${dur_minutes < 10 ? '0': ''}${dur_minutes}:${dur_seconds < 10 ? '0' : ''}${dur_seconds}`
-
-
+     
+     
                if (newAudio) {
                     newAudio.volume = volume / 100
                     newAudio.play().catch(err => {console.log(`Error: ${err}`)})
@@ -82,6 +76,8 @@
                }
           }
      }
+     let volume = $state(50);
+
 
      $effect(() => {
           if (musicState.isPlaying && newAudio) {
@@ -100,7 +96,7 @@
 
 </script>
 
-<div id="discography" class="py-5">
+<div id="discography" class="p-10 w-120 md:w-200 duration-300 select-none">
     
     <div class="font-title -translate-x-10 hover:translate-x-0 duration-500 transition group flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
         <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
@@ -113,7 +109,7 @@
     
     <!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
     <div class="">
-         <div class="my-10 w-full">
+         <div class="w-full">
               
               <div class="flex p-3">
                    <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
@@ -122,7 +118,7 @@
                         <h1 class="text-2xl text-neutral-600 font-light">currently playing..</h1>
                         <h1 class="text-4xl font-black lowercase">{_currentlyPlaying.title}</h1>
                         <div class="flex">
-                             <p>{_currentlyPlaying.currentTimeString} —— {_currentlyPlaying.durationString}</p>
+                             <p>{_currentlyPlaying.currentTimeString} — {_currentlyPlaying.durationString}</p>
                         </div>
                    </div>
               </div>
@@ -141,8 +137,8 @@
               <div class="flex flex-col text-left gap-y-2">
                    {#each Music as music}
                         <button
-                             onclick={() => {toggleMusic(music.id)}} 
-                             class="max-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
+                             onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}} 
+                             class="max-w-75 md:max-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
                         >
                             <span class="text-ellipsis">{music.title}</span>
                             <span class="text-center">—</span>

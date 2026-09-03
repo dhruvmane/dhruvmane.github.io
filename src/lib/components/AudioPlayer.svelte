@@ -24,7 +24,7 @@
 </script>
 
 
-<main bind:this={player} class="fixed bottom-0 right-0">
+<main bind:this={player} class="hidden md:block fixed bottom-0 right-0">
      <button 
           onclick={() => { if (musicState.isPlaying) {musicState.isPlaying = false; CurrentlyPlaying.music?.pause()} else {musicState.isPlaying = true; CurrentlyPlaying.music?.play()}}}
           class="m-10 p-1 bg-black justify-items-center text-left hover:brightness-50 hover:pointer-cursor duration-300 transition select-none">
