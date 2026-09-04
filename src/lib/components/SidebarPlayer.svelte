@@ -43,6 +43,6 @@
 
         <!-- PROGRESS BAR -->
         <div class="w-full h-0.5 bg-white/20">
-            <div class="h-full bg-[#9DFA9F]/50 duration-300" style="width: {progress}%"></div>
+            <div class="h-full bg-[#9DFA9F]/50" style="width: {progress}%"></div>
         </div>
 </button>

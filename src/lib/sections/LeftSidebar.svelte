@@ -2,15 +2,17 @@
     import Clock from '$lib/components/Clock.svelte'
 	import SidebarPlayer from '$lib/components/SidebarPlayer.svelte';
 	import Icon from '@iconify/svelte';
+	import { page } from '$lib/modules/globals.svelte';
 </script>
 
 <div class="hidden lg:w-1/3 md:flex flex-col lg:block h-full text-white p-10 text-2xl sticky top-0 self-start">
 
     
-    <ul class="hidden pt-28 pb-10 px-28 lg:grid grid-cols-1 gap-5 font-ui">
-         <li class=""><a href="#about-me"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">about me</a></li>
-         <li class=""><a href="#projects"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">projects</a></li>
-         <li class=""><a href="#discography" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">discography</a></li>
+    <ul class="hidden pt-16 pb-10 px-28 lg:grid grid-cols-1 gap-5 font-ui">
+        <li class=""><a href="#top"     style="opacity: {page.scroll.percent * 1000};" class="absolute opacity-100 duration-300 top-20 px-2 py-1 text-[12px] flex items-center gap-2 hover:underline">Go to Top <Icon icon="akar-icons:arrow-up"/></a></li>
+        <li class=""><a href="#about-me"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">about me</a></li>
+        <li class=""><a href="#projects"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">projects</a></li>
+        <li class=""><a href="#discography" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">discography</a></li>
     </ul>
 
     <!-- TIME & WEATHER -->

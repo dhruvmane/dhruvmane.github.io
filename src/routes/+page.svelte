@@ -1,7 +1,7 @@
 
 <script lang="ts">
      import '../app.css'
-     
+
      import AboutMe from '$lib/sections/AboutMe.svelte';
      import Projects from '$lib/sections/Projects.svelte';
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
@@ -10,7 +10,7 @@
      import AudioPlayer from '$lib/components/AudioPlayer.svelte';
      import Notice from '$lib/sections/Notice.svelte';
      import Clock from '$lib/components/Clock.svelte'
-     
+
 </script>
 
 <svelte:head>
@@ -18,11 +18,11 @@
 </svelte:head>
 
 <div class="flex" id="page">
-    
+
      <LeftSidebar />
      <main class="text-white justify-self-center select-none">
-         
-         <div class="my-10">
+        <div id="#top"></div>
+        <div class="my-10">
             <AboutMe />
         </div>
         <div class="my-10">

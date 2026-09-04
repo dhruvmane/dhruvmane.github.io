@@ -2,6 +2,10 @@ export const details = {
     desc: "I am a Computer Science Student (excalidraw lover) & a Music Producer."
 }
 
+export let page: any = $state({
+    scroll: { total: 0, percent: 0.01, top: 0 },
+})
+
 export const Links = [
     { name: "Spotify", href: "https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ", icon: {name: "ant-design:spotify-filled"}},
     { name: "LinkedIn", href: "https://www.linkedin.com/in/dhruv-mane-1b4b4935b/", icon: {name: "akar-icons:linkedin-box-fill"}},
