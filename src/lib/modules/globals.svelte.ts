@@ -104,8 +104,6 @@ let Projects = [
 
 // Import Music
 import angeldust from "$lib/assets/music/angeldust.mp3"
-import redfog from "$lib/assets/music/angeldust.mp3"
-import wherecanigo from "$lib/assets/music/angeldust.mp3"
 import aria_math from "$lib/assets/music/aria math.mp3"
 import findme from "$lib/assets/music/findme.mp3"
 
@@ -116,6 +114,7 @@ let CurrentlyPlaying = $state({
     currentTimeString: "00:00",
     durationString: "00:00",
     duration: 0,
+    time: 0,
     music: null as HTMLAudioElement | null,
 })
 let Music = [
