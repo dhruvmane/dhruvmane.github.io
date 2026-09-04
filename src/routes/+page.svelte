@@ -20,7 +20,7 @@
 <div class="flex" id="page">
 
      <LeftSidebar />
-     <main class="text-white justify-self-center select-none">
+     <main class="text-white justify-self-center">
         <div id="#top"></div>
         <div class="my-10">
             <AboutMe />
