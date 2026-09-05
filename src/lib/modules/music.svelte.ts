@@ -50,7 +50,7 @@ let musicState = $state({ isPlaying: false })
 const previousId = parseInt(localStorage.getItem("music-id")!)
 export let CurrentlyPlaying: any = $state({
     id: previousId,
-    title: Music.find(music => music.id === previousId)?.title,
+    title: previousId === null ? Music.find(music => music.id === previousId)?.title : "NO SONG",
     currentTimeString: "00:00",
     durationString: "00:00",
     duration: Music.find(map => map.id === previousId)?.duration,
