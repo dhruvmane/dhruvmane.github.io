@@ -5,7 +5,7 @@
 	import { page } from '$lib/modules/globals.svelte';
 
 	import Footer from '$lib/sections/Footer.svelte';
-
+	
 	onMount(() => {
 	    const ref = new lenis({
 			autoRaf: true,

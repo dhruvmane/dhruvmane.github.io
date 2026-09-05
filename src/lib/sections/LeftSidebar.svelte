@@ -3,6 +3,11 @@
 	import SidebarPlayer from '$lib/components/SidebarPlayer.svelte';
 	import Icon from '@iconify/svelte';
 	import { page } from '$lib/modules/globals.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+	    let musicId = localStorage.getItem("music-id");
+	})
 </script>
 
 <div class="hidden lg:w-1/3 md:flex flex-col lg:block h-full text-white p-10 text-2xl sticky top-0 self-start">

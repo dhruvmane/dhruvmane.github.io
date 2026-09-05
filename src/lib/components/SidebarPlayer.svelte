@@ -1,7 +1,8 @@
 <script lang="ts">
-    import { CurrentlyPlaying, musicState } from "$lib/modules/music.svelte";
+    import { toggleMusic, CurrentlyPlaying, musicState } from "$lib/modules/music.svelte";
     import Icon from '@iconify/svelte';
-
+    
+    
     let isSpinning = $derived(musicState.isPlaying);
 
     let curPlaying = CurrentlyPlaying

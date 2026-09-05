@@ -3,8 +3,9 @@
     import disco from '$lib/assets/icons/discography.svg'
     import { Music, CurrentlyPlaying, musicState } from '$lib/modules/music.svelte';
     import Icon from '@iconify/svelte';
-
+    
      let _currentlyPlaying: any = $state({
+          id: localStorage.getItem('music-id'),
           title: "title",
           currentTimeString: "00:00",
           durationString: "00:00"
@@ -96,6 +97,10 @@
           }
      })
 
+     $effect(() => {
+         localStorage.setItem("music-id", _currentlyPlaying.id!);
+     })
+     
 </script>
 
 <div id="discography" class="group p-10 w-120 md:w-200 duration-300">
