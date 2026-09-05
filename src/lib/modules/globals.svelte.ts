@@ -65,17 +65,10 @@ let Talents = {
 }
 
 let Projects = [
-     {
-        HackathonWinner: true,
-        HackathonInfo: {
-            name: "Hacktoon 2026",
-            host: {
-                name: "AIKTC",
-                href: "https://aiktc.ac.in/"
-            }
-        }, 
+    {
         name: "TradeBull",
         link: "https://tradebull-three.vercel.app/",
+        tagline: "Won Hacktoon 2026 @ AIKTC",
         description: "a Virtual Trading Simulator, Same Feeling & Zero Risk.",
         stack: [
                "React", "Vite", "express.js"
@@ -85,6 +78,7 @@ let Projects = [
           WorkInProgress: true,
           name: "Mahal",
           link: "https://github.com/dhruvmane/mahal",
+          tagline: "Work in Progress",
           description: "opensource spotify-esque client for locally installed music.",
           stack: [
                "Typescript", "Rust",
@@ -96,6 +90,7 @@ let Projects = [
           WorkInProgress: true,
           name: "Mangase",
           link: "https://github.com/the-mangase-group/website",
+          tagline: "Work in Progress",
           description: "Revolutionizing Digital Mangas.",
           stack: [
                "Typescript", "fastify",

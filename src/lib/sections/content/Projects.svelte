@@ -25,8 +25,8 @@
                        {project.name}
                        <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5">
                    </div>
-                   {#if project.HackathonWinner === true && project.HackathonInfo}
-                        <p class="text-[9px] font-ui"> Won <span class="text-[#EBF2E1]">{project.HackathonInfo.name}</span> @ <span class="hover:underline">{project.HackathonInfo.host.name}</span></p>
+                   {#if project.tagline}
+                        <p class="text-[9px] font-ui text-white/60">{project.tagline}</p>
                    {/if}
                    <p class="my-2.5 min-h-25">{project.description}</p>
                    <div class="flex flex-wrap-reverse">
