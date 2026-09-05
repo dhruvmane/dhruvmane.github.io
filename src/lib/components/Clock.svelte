@@ -9,7 +9,7 @@
 
     function getTime(time: Date) {
         // CONVERT from 13,14,15hrs to 1,2,3hrs
-        let hours = time.getHours() > 12 ? (`0` + (time.getHours() - 12).toString()) : (`0` + time.getHours().toString())
+        let hours = time.getHours() > 12 ? ((time.getHours() - 12).toString()) : (`0` + time.getHours().toString())
         let minutes = time.getMinutes() < 10 ? (`0` + time.getMinutes()) : time.getMinutes()
         let am_pm = time.getHours() < 12 ? "AM" : "PM"
 

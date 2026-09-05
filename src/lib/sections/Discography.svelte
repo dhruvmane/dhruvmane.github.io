@@ -1,9 +1,8 @@
 <script lang="ts">
 
-     import Spotify from '$lib/assets/icons/spotify1.svg'
-     import ProfilePic from '$lib/assets/icons/dhruv.jpg'
-     import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
-     import Icon from '@iconify/svelte';
+    import disco from '$lib/assets/icons/discography.svg'
+    import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
+    import Icon from '@iconify/svelte';
 
      let _currentlyPlaying: any = $state({
           title: "title",
@@ -99,7 +98,7 @@
 
 </script>
 
-<div id="discography" class="group p-10 w-120 md:w-200 duration-300 select-none">
+<div id="discography" class="group p-10 w-120 md:w-200 duration-300">
 
     <div class="font-title -translate-x-10 group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
         <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
@@ -111,40 +110,28 @@
     </div>
 
     <!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
-    <div class="">
-         <div class="w-full">
+    <div class="p-2 min-w-201 flex duration-300">
+         <div class="items-center m-auto">
+              <!-- <div class="flex w-full flex-1 flex-col items-center p-3">
+                  <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
+                  <h2>My Discography</h2>
+              </div> -->
 
-              <div class="flex p-3">
-                   <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
-                   <div class="mx-2 my-3">
-                        <p class="text-sm italic text-neutral-600 font-light">my discography</p>
-                        <h1 class="text-2xl text-neutral-600 font-light">currently playing..</h1>
-                        <h1 class="text-4xl font-black lowercase">{_currentlyPlaying.title}</h1>
-                        <div class="flex">
-                             <p>{_currentlyPlaying.currentTimeString} — {_currentlyPlaying.durationString}</p>
-                        </div>
-                   </div>
-              </div>
-
+              <img src={disco} class="mb-10 w-180 justify-self-center" alt="disco"/>
+              
               <!-- Music Discography Icons -->
-              <div class="flex gap-x-10">
+              <div class="gap-x-10 hidden">
                    <!-- Spotify Link -->
-                   <a target="_blank" rel="noopener noreferrer" class="flex" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ?si=72820b49ebe247f9">
-                        <img alt="spotify" src={Spotify} class="size-[100px]">
-                   </a>
-
                    <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
               </div>
 
-
-              <div class="flex flex-col text-left gap-y-2">
+              <div class="flex flex-col text-left gap-1 px-10 w-full">
                    {#each Music as music}
                         <button
                              onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}
-                             class="max-w-75 md:max-w-100 font-ui text-left lowercase border-white/10 border grid grid-cols-3 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
+                             class=" font-ui text-left lowercase border-white/10 border grid grid-cols-2 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
                         >
-                            <span class="text-ellipsis">{music.title}</span>
-                            <span class="text-center">—</span>
+                            <span class="text-ellipsis min-w-100">{music.title}</span>
                             <span class="text-right">{music.duration}</span>
                         </button>
                         <audio id={"music-"+ music.id} src={music.src}></audio>
