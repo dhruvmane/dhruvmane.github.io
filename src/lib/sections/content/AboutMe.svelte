@@ -13,7 +13,7 @@
     <!-- INTRODUCTION -->
      <div class="flex md:flex mb-10 gap-x-10">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
-               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-50 md:w-50 saturate-0 border border-white/7 -skew-y-1"/>
+               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-50 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform -skew-y-3 -skew-x-5 hover:-skew-y-5 hover:-skew-x-6"/>
           </a>
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
                <div class="w-50 md:w-full flex flex-col p-2">
