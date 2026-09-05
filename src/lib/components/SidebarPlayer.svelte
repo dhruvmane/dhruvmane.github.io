@@ -12,7 +12,6 @@
 
     
     $effect(() => {
-        $inspect(progress)
         const audio = currAudio;
         if (!audio) return;
 
