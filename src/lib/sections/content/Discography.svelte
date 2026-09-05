@@ -103,10 +103,10 @@
      
 </script>
 
-<div id="discography" class="group p-10 w-120 md:w-200 duration-300">
+<div id="discography" class="group p-6 md:p-10 w-full md:w-200 duration-300">
 
-    <div class="font-title -translate-x-10 group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
-        <span class="opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
+    <div class="font-title md:-translate-x-10 group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
+        <span class="md:opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
             <Icon icon="ant-design:spotify-filled"/>
         </span>
         <span class="">
@@ -115,7 +115,7 @@
     </div>
 
     <!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
-    <div class="p-2 min-w-201 flex duration-300">
+     <div class="p-2 min-w-full md:min-w-201 flex duration-300">
          <div class="items-center m-auto">
               <!-- <div class="flex w-full flex-1 flex-col items-center p-3">
                   <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
@@ -123,7 +123,7 @@
               </div> -->
 
               <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ">
-                  <img src={disco} class="mb-10 w-180 justify-self-center" alt="disco"/>
+                  <img src={disco} class="mb-10 w-full max-w-180 justify-self-center" alt="disco"/>
               </a>
               
               <!-- Music Discography Icons -->
@@ -132,14 +132,14 @@
                    <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
               </div>
 
-              <div class="flex flex-col text-left gap-1 px-10 w-full">
+              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-full">
                    {#each Music as music}
                         <button
                              onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}
                              class=" font-ui text-left lowercase border-white/10 border grid grid-cols-2 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
                         >
-                            <span class="text-ellipsis min-w-100">{music.title}</span>
-                            <span class="text-right">{music.duration}</span>
+                             <span class="truncate min-w-0">{music.title}</span>
+                             <span class="text-right">{music.duration}</span>
                         </button>
                         <audio id={"music-"+ music.id} src={music.src}></audio>
                    {/each}

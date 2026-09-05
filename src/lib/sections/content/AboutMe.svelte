@@ -8,16 +8,16 @@
 
 <!-- Personal Information -->
 <!-- <h2 id="about-me" class="text-3xl font-bold lowercase my-5">about me <span class="text-neutral-700">—————————————————————</span></h2> -->
-<main id="about-me" class="group p-10 md:w-200 duration-300 ">
+<main id="about-me" class="group p-6 md:p-10 md:w-200 w-full duration-300 ">
     
     <!-- INTRODUCTION -->
-     <div class="flex md:flex mb-10 gap-x-10">
+     <div class="flex flex-col md:flex-row mb-10 gap-x-10 gap-y-4">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
-               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-50 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform -skew-y-3 -skew-x-5 hover:-skew-y-5 hover:-skew-x-6"/>
+               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-25 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform -skew-y-3 -skew-x-5 hover:-skew-y-5 hover:-skew-x-6"/>
           </a>
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
-               <div class="w-50 md:w-full flex flex-col p-2">
-                   <img src={imdhruv} alt="intro" class="-skew-y-2 -translate-y-1 w-90">
+               <div class="w-full flex flex-col p-2">
+                   <img src={imdhruv} alt="intro" class="-skew-y-2 -translate-y-1 w-full max-w-90">
                    <p class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
                </div>
                <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">

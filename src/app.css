@@ -50,6 +50,7 @@
 body {
     height: 100%;
     scrollbar-width: thin;
+    overflow-x: clip;
     
     background-color: #0A0A0A;
     opacity: 1;
@@ -60,6 +61,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 /* Hide Scrollbar */
