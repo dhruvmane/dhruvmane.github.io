@@ -21,7 +21,7 @@
 <div class="flex" id="page">
 
      <LeftSidebar />
-     <main class="text-white justify-self-center">
+     <main class="text-white md:ml-33.5 justify-self-center w-full max-w-full overflow-x-clip">
         <div id="#top"></div>
         <div class="my-10">
             <AboutMe />
