@@ -11,6 +11,8 @@
     --duration-ui: 500ms;
     --duration-ui-slow: 1000ms;
 
+    --skew-ui: 5deg;
+    
     --animate-blink: blink 2s step-start infinite;
     @keyframes blink {
         0%, 100% { opacity: 1; }

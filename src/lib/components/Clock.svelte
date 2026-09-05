@@ -57,7 +57,7 @@
     
 </script>
 
-<main class="flex flex-col font-mono pt-2.5 relative text-[16px]">
+<main class="-skew-y-ui flex flex-col font-mono pt-2.5 relative text-[16px]">
     <div class="flex items-center gap-2">
         <h3 class="">{formattedTime.hours}<span class="animate-blink">:</span>{formattedTime.minutes} {formattedTime.am_pm}</h3>
         {#if formattedTime.cel === "day"}
