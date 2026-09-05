@@ -2,14 +2,15 @@
 <script lang="ts">
      import '../app.css'
 
-     import AboutMe from '$lib/sections/AboutMe.svelte';
-     import Projects from '$lib/sections/Projects.svelte';
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
-     import Discography from '$lib/sections/Discography.svelte';
+     import AboutMe from '$lib/sections/content/AboutMe.svelte';
+     import Projects from '$lib/sections/content/Projects.svelte';
+     import Discography from '$lib/sections/content/Discography.svelte';
      import RightSidebar from '$lib/sections/RightSidebar.svelte';
      import AudioPlayer from '$lib/components/AudioPlayer.svelte';
      import Notice from '$lib/sections/Notice.svelte';
      import Clock from '$lib/components/Clock.svelte'
+	import Blogs from '$lib/sections/content/Blogs.svelte';
 
 </script>
 
@@ -31,6 +32,9 @@
         <div class="my-10">
             <Discography />
         </div>
+        <!-- <div class="my-10"> -->
+            <!-- <Blogs /> -->
+        <!-- </div> -->
      </main>
      <RightSidebar />
      <!-- <AudioPlayer /> -->

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/icons/favicon.png';
+	import favicon from '$lib/assets/images/dhruv.jpg';
 	import { onMount } from 'svelte';
 	import lenis from 'lenis';
 	import { page } from '$lib/modules/globals.svelte';

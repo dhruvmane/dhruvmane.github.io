@@ -117,7 +117,9 @@
                   <h2>My Discography</h2>
               </div> -->
 
-              <img src={disco} class="mb-10 w-180 justify-self-center" alt="disco"/>
+              <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ">
+                  <img src={disco} class="mb-10 w-180 justify-self-center" alt="disco"/>
+              </a>
               
               <!-- Music Discography Icons -->
               <div class="gap-x-10 hidden">

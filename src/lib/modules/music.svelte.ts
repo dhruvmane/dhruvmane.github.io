@@ -51,7 +51,7 @@ let Music = [
      {
           id: 8,
           title: "blackbird mystery",
-          duration: "05:19",
+          duration: "02:10",
           src: blackbird
      }
 ]

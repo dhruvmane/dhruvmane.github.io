@@ -13,6 +13,7 @@
         <li class=""><a href="#about-me"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">about me</a></li>
         <li class=""><a href="#projects"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">projects</a></li>
         <li class=""><a href="#discography" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">discography</a></li>
+        <!-- <li class=""><a href="#blogs" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">blogs</a></li> -->
     </ul>
 
     <!-- TIME & WEATHER -->

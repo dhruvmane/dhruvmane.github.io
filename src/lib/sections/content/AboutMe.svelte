@@ -1,6 +1,7 @@
 <script>
      import { Talents, Links, details } from "$lib/modules/globals.svelte";
-     import ProfilePic from '$lib/assets/icons/dhruv.jpg'
+     import ProfilePic from '$lib/assets/images/dhruv.jpg'
+     import imdhruv from '$lib/assets/icons/imdhruv.svg'
      import Icon from '@iconify/svelte'
      
 </script>
@@ -12,12 +13,12 @@
     <!-- INTRODUCTION -->
      <div class="flex md:flex mb-10 gap-x-10">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
-               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 size-40 md:size-40 border-4 border-black"/>
+               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-50 md:w-50 saturate-0 border border-white/7 -skew-y-1"/>
           </a>
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
                <div class="w-50 md:w-full flex flex-col p-2">
-                   <h1 class="font-bold text-4xl md:text-6xl">Hi, I'm <a href="https://github.com/dhruvmane">dhruv</a>.</h1>
-                   <p  class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
+                   <img src={imdhruv} alt="intro" class="-skew-y-2 -translate-y-1 w-90">
+                   <p class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
                </div>
                <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">
                     {#each Links as link}
