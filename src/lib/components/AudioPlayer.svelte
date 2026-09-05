@@ -1,5 +1,5 @@
 <script lang="ts">
-     import { CurrentlyPlaying, musicState } from "$lib/modules/globals.svelte";
+     import { CurrentlyPlaying, musicState } from "$lib/modules/music.svelte";
 	import { onMount } from "svelte";
      
      import gsap from "gsap";

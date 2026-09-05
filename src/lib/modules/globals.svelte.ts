@@ -106,45 +106,7 @@ let Projects = [
      },
 ]
 
-// Import Music
-import angeldust from "$lib/assets/music/angeldust.mp3"
-import aria_math from "$lib/assets/music/aria math.mp3"
-import findme from "$lib/assets/music/findme.mp3"
-
-let musicState = $state({isPlaying: false})
-let CurrentlyPlaying = $state({
-    id: null,
-    title: "title",
-    currentTimeString: "00:00",
-    durationString: "00:00",
-    duration: 0,
-    time: 0,
-    music: null as HTMLAudioElement | null,
-})
-let Music = [
-     {    
-          id: 1,
-          title: "angel dust.",
-          duration: "02:53",
-          src: angeldust
-     },
-     {    
-          id: 4,
-          title: "aria math",
-          duration: "02:41",
-          src: aria_math
-     },
-     {    
-          id: 5,
-          title: "find me",
-          duration: "02:33",
-          src: findme
-     }
-]
-
-
 export { Talents, Projects, }
-export { Music, CurrentlyPlaying, musicState }
 
 
 // CLOCK RELATED

@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import disco from '$lib/assets/icons/discography.svg'
-    import { Music, CurrentlyPlaying, musicState } from '$lib/modules/globals.svelte';
+    import { Music, CurrentlyPlaying, musicState } from '$lib/modules/music.svelte';
     import Icon from '@iconify/svelte';
 
      let _currentlyPlaying: any = $state({
