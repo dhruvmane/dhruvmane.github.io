@@ -7,11 +7,8 @@
      import Projects from '$lib/sections/content/Projects.svelte';
      import Discography from '$lib/sections/content/Discography.svelte';
      import RightSidebar from '$lib/sections/RightSidebar.svelte';
-     import AudioPlayer from '$lib/components/AudioPlayer.svelte';
-     import Notice from '$lib/sections/Notice.svelte';
-     import Clock from '$lib/components/Clock.svelte'
-	import Blogs from '$lib/sections/content/Blogs.svelte';
-
+     import MobilePlayer from '$lib/components/MobilePlayerController.svelte'
+     
 </script>
 
 <svelte:head>
@@ -35,6 +32,10 @@
         <!-- <div class="my-10"> -->
             <!-- <Blogs /> -->
         <!-- </div> -->
+
+        <div class="mx-5 sticky bottom-4">
+            <MobilePlayer />
+        </div>
      </main>
      <RightSidebar />
      <!-- <AudioPlayer /> -->
