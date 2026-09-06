@@ -96,6 +96,18 @@ let Projects = [
                "HTML", "CSS",
                "Sveltekit"
           ]
+     },
+     {
+          name: "Mangase",
+          link: "https://github.com/the-mangase-group/website",
+          tagline: "Work in Progress",
+          description: "Revolutionizing Digital Mangas.",
+          stack: [
+               "Typescript", "fastify",
+               "PostgresSQL", "drizzle",
+               "HTML", "CSS",
+               "Sveltekit"
+          ]
      }
 ]
 

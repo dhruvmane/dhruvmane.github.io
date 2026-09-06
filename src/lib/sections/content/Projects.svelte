@@ -30,7 +30,7 @@
         </span>
     </div>
 
-    <main class="grid grid-cols-1 md:grid-cols-3 md:w-200 gap-4">
+    <main class="grid grid-cols-1 md:grid-cols-3 md:w-200 gap-2">
          {#each ProjectsVisible as project}
               <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-full md:w-65 h-full p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
                    <div class="">
@@ -52,12 +52,14 @@
          {/each}
     </main>
 
-    <button onclick={() => {toggleShowAll()}} class="text-center min-w-24.5 my-2 px-2 py-1 border border-white/10 bg-white/5 hover:bg-white/10 duration-300 hover:cursor-pointer">
+    {#if Projects.length > ProjectsMinVisible}
+    <button onclick={() => {toggleShowAll()}} class="text-center min-w-24.5 mt-2 px-2 py-1 border border-white/10 bg-white/5 hover:bg-white/10 duration-300 hover:cursor-pointer">
         {#if !showAll}
             Show More
         {:else}
             Hide
         {/if}
     </button>
+    {/if}
 
 </div>
