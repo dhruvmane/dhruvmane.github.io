@@ -3,11 +3,6 @@
 	import SidebarPlayer from '$lib/components/SidebarPlayer.svelte';
 	import Icon from '@iconify/svelte';
 	import { page } from '$lib/modules/globals.svelte';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-	    let musicId = localStorage.getItem("music-id");
-	})
 
 </script>
 
@@ -44,7 +39,7 @@
         </div>
     </div>
 
-    <div class="px-28 py-10">
+    <div class="px-28 py-2 pt-10">
         <SidebarPlayer />
     </div>
 

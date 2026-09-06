@@ -1,8 +1,8 @@
 <script lang="ts">
     import { toggleMusic, CurrentlyPlaying, musicState } from "$lib/modules/music.svelte";
     import Icon from '@iconify/svelte';
-    
-    
+
+
     let isSpinning = $derived(musicState.isPlaying);
 
     let curPlaying = CurrentlyPlaying
@@ -11,10 +11,10 @@
     let currAudioLength = $derived(Math.floor(curPlaying.duration * 10) / 10)
     let progress = $derived(Math.floor((currAudioTime/currAudioLength) * 1000) / 10)
 
-    
-    $effect(() => {
+	$effect(() => {
         const audio = currAudio;
         if (!audio) return;
+
 
         currAudioLength = curPlaying.duration
         currAudioTime = curPlaying.time
