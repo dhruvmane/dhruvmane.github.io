@@ -44,7 +44,7 @@
                    </div>
                    <p class="my-2.5 min-h-25">{project.description}</p>
                    <div class="flex flex-wrap-reverse mt-auto">
-                        {#each [...project.stack].reverse() as stack}
+                        {#each [...project.stack].reverse().sort((a, b) => a.length - b.length) as stack}
                             <Tags label={stack}/>
                         {/each}
                    </div>
