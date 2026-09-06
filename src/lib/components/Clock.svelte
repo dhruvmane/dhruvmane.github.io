@@ -9,9 +9,12 @@
 
     function getTime(time: Date) {
         // CONVERT from 13,14,15hrs to 1,2,3hrs
-        let hours = time.getHours() > 12 ? ((time.getHours() - 12).toString()) : (`0` + time.getHours().toString())
-        let minutes = time.getMinutes() < 10 ? (`0` + time.getMinutes()) : time.getMinutes()
-        let am_pm = time.getHours() < 12 ? "AM" : "PM"
+        let hourInt = time.getHours()
+        let minuteInt = time.getMinutes()
+        
+        let hours = hourInt > 12 ? (`0` + (hourInt - 12).toString()) : ((hourInt < 10) ? `0` + hourInt.toString() : hourInt.toString())
+        let minutes = minuteInt < 10 ? (`0` + minuteInt) : minuteInt
+        let am_pm = hourInt < 12 ? "AM" : "PM"
 
         let date = time.getDate();
         let day = Day[time.getDay()];    // SUNDAY, MONDAY, ETC..
