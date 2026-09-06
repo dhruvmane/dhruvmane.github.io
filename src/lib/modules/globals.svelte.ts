@@ -81,7 +81,6 @@ let Projects = [
           description: "opensource spotify-esque client for locally installed music.",
           stack: [
                "Typescript", "Rust",
-               "HTML", "CSS",
                "Sveltekit", "Tauri"
           ]
      },
@@ -93,20 +92,7 @@ let Projects = [
           stack: [
                "Typescript", "fastify",
                "PostgresSQL", "drizzle",
-               "HTML", "CSS",
-               "Sveltekit"
-          ]
-     },
-     {
-          name: "Mangase",
-          link: "https://github.com/the-mangase-group/website",
-          tagline: "Work in Progress",
-          description: "Revolutionizing Digital Mangas.",
-          stack: [
-               "Typescript", "fastify",
-               "PostgresSQL", "drizzle",
-               "HTML", "CSS",
-               "Sveltekit"
+               "Astro"
           ]
      }
 ]

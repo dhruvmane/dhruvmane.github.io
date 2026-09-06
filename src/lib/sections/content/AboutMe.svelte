@@ -47,7 +47,7 @@
                    <div class="flex flex-col w-full my-2.5">
                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">languages</h1>
                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                           {#each Talents.languages as talent}
+                           {#each [...Talents.languages].sort((a, b) => a.name.length - b.name.length) as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>
                                     {talent.name}
@@ -60,7 +60,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">frameworks</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each Talents.frameworks as talent}
+                            {#each [...Talents.frameworks].sort((a, b) => a.name.length - b.name.length) as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
                                      {talent.name}
@@ -73,7 +73,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">tech</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each Talents.packages as talent}
+                            {#each [...Talents.packages].sort((a, b) => a.name.length - b.name.length) as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
                                      {talent.name}
@@ -86,7 +86,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">miscellaneous</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each Talents.misc as talent}
+                            {#each [...Talents.misc].sort((a, b) => a.name.length - b.name.length) as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>
                                     {talent.name}
