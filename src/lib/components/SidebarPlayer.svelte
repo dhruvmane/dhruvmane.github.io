@@ -11,7 +11,7 @@
     let currAudioLength = $derived(Math.floor(curPlaying.duration * 10) / 10)
     let progress = $derived(Math.floor((currAudioTime/currAudioLength) * 1000) / 10)
 
-
+    
     $effect(() => {
         const audio = currAudio;
         if (!audio) return;

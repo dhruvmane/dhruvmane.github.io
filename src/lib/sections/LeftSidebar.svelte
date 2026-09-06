@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Clock from '$lib/components/Clock.svelte'
 	import SidebarPlayer from '$lib/components/SidebarPlayer.svelte';
 	import Icon from '@iconify/svelte';
@@ -8,13 +8,14 @@
 	onMount(() => {
 	    let musicId = localStorage.getItem("music-id");
 	})
+
 </script>
 
 <div class="hidden lg:w-1/3 md:flex flex-col lg:block h-full text-white p-10 text-2xl sticky top-0 self-start">
 
 
     <ul class="hidden pt-12 pb-10 px-28 lg:grid grid-cols-1 gap-5 font-ui">
-        <li class="-skew-y-ui"><a href="#top"         class="duration-300 px-2 py-1 text-[12px] flex items-center gap-2 hover:underline" style="opacity: {page.scroll.percent * 500}%;">Go to Top <Icon icon="akar-icons:arrow-up"/></a></li>
+        <li class="-skew-y-ui"><button onclick={() => {scrollTo({top: 0})}} class="hover:cursor-pointer duration-300 px-2 py-1 text-[12px] flex items-center gap-2 hover:bg-white/7 border border-transparent hover:border-white/50 w-fit" style="opacity: {page.scroll.percent * 500}%;">Go to Top <Icon icon="akar-icons:arrow-up"/></button></li>
         <li class="-skew-y-ui"><a href="#about-me"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">about me</a></li>
         <li class="-skew-y-ui"><a href="#projects"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">projects</a></li>
         <li class="-skew-y-ui"><a href="#discography" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">discography</a></li>

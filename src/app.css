@@ -83,6 +83,11 @@ html {
     font-family: 'DM Sans';
     src: url("./lib/assets/fonts/DMSans-Regular.ttf")
 }
+@font-face {
+    font-family: 'Backrooms';
+    src: url("./lib/assets/fonts/BackroomsEndCredits-Regular.ttf");
+}
+
 
 ::selection {
     background: white;

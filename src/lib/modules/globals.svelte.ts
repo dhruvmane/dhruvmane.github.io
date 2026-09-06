@@ -75,7 +75,6 @@ let Projects = [
         ]
      },
      {
-          WorkInProgress: true,
           name: "Mahal",
           link: "https://github.com/dhruvmane/mahal",
           tagline: "Work in Progress",
@@ -87,7 +86,6 @@ let Projects = [
           ]
      },
      {
-          WorkInProgress: true,
           name: "Mangase",
           link: "https://github.com/the-mangase-group/website",
           tagline: "Work in Progress",
@@ -98,7 +96,7 @@ let Projects = [
                "HTML", "CSS",
                "Sveltekit"
           ]
-     },
+     }
 ]
 
 export { Talents, Projects, }
