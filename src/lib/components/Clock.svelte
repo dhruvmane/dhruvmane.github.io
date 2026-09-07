@@ -28,10 +28,10 @@
         if (time.getHours() >= 19 && time.getHours() <= 20) cel = "sunset"
         if (time.getHours() >= 21 || time.getHours() <= 6) cel = "night"
         
-        function getSuffix(day: number) {
-            if (day > 3 && day < 21) return 'th'; 
+        function getSuffix(date: number) {
+            if (date > 3 && date < 21) return 'th'; 
             
-            switch (day % 10) {
+            switch (date % 10) {
               case 1:  return 'st';
               case 2:  return 'nd';
               case 3:  return 'rd';
@@ -39,7 +39,7 @@
             }
         }
         
-        let suffix: "th" | "st" | "nd" | "rd" = getSuffix(time.getDay());
+        let suffix: "th" | "st" | "nd" | "rd" = getSuffix(time.getDate());
         
         return {
             hours, minutes, am_pm, cel,
