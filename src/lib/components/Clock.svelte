@@ -12,7 +12,7 @@
         let hourInt = time.getHours()
         let minuteInt = time.getMinutes()
         
-        let hours = hourInt > 12 ? (`0` + (hourInt - 12).toString()) : ((hourInt < 10) ? `0` + hourInt.toString() : hourInt.toString())
+        let hours = hourInt > 12 ? (hourInt - 12 < 10 ? (`0` + (hourInt - 12).toString()) : (hourInt-12).toString()) : ((hourInt < 10) ? `0` + hourInt.toString() : hourInt.toString())
         let minutes = minuteInt < 10 ? (`0` + minuteInt) : minuteInt
         let am_pm = hourInt < 12 ? "AM" : "PM"
 
