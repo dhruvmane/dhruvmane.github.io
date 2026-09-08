@@ -36,7 +36,7 @@
             <!-- INFO -->
             <div class="px-2 flex items-center gap-7">
                 <!-- left-to-right scrolling, like analog music player -->
-                <h2 class="w-20 flex-1 font-mono text-[12px] h-4 overflow-hidden text-ellipsis uppercase text-left">{curPlaying.title}</h2>
+                <h2 class="w-20 text-ellipsis overflow-hidden flex-1 font-mono text-[12px] h-4 uppercase text-left animate-t">{curPlaying.title}</h2>
                 <h2 class="font-mono text-[12px] overflow-hidden text-ellipsis uppercase text-right">{curPlaying.currentTimeString}</h2>
             </div>
         </div>
@@ -46,3 +46,7 @@
             <div class="h-full bg-[#9DFA9F]/50" style="width: {progress}%"></div>
         </div>
 </button>
+
+<style>
+
+</style>

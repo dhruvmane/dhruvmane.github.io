@@ -17,7 +17,7 @@
 
 <div class="flex" id="page">
 
-     <LeftSidebar />
+     <!-- <LeftSidebar /> -->
      <main class="text-white md:ml-33.5 justify-self-center w-full max-w-full overflow-x-clip">
         <div id="#top"></div>
         <div class="my-10">
@@ -37,6 +37,6 @@
             <MobilePlayer />
         </div>
      </main>
-     <RightSidebar />
+     <!-- <RightSidebar /> -->
      <!-- <AudioPlayer /> -->
 </div>

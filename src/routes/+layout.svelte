@@ -5,6 +5,7 @@
 	import { page } from '$lib/modules/globals.svelte';
 
 	import Footer from '$lib/sections/Footer.svelte';
+	import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
 	
 	onMount(() => {
 	    const ref = new lenis({
@@ -26,7 +27,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="page wallpaper">
+<div class="page wallpaper flex">
+    <LeftSidebar />
     {@render children()}
     <Footer />
 </div>
