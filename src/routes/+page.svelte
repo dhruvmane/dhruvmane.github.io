@@ -2,11 +2,9 @@
 <script lang="ts">
      import '../app.css'
 
-     import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
      import AboutMe from '$lib/sections/content/AboutMe.svelte';
      import Projects from '$lib/sections/content/Projects.svelte';
      import Discography from '$lib/sections/content/Discography.svelte';
-     import RightSidebar from '$lib/sections/RightSidebar.svelte';
      import MobilePlayer from '$lib/components/MobilePlayerController.svelte'
      
 </script>

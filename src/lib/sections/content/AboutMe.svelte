@@ -3,7 +3,25 @@
      import ProfilePic from '$lib/assets/images/dhruv.jpg'
      import imdhruv from '$lib/assets/icons/imdhruv.svg'
      import Icon from '@iconify/svelte'
+     import { marked } from "marked";
+     import DOMPurify from 'dompurify';
+     import aboutMeMarkdown from "$lib/texts/about-me.md?raw";
+     import { onMount } from "svelte";
 
+     let knowMeBetter = $state(false);
+     let extraneousInformation = $state("");
+
+     function toggleKMB() {
+         knowMeBetter != knowMeBetter;
+     }
+     
+     onMount(async () => {
+         const raw = await marked.parse(aboutMeMarkdown);
+         const purified = DOMPurify.sanitize(raw);
+         extraneousInformation = purified;
+     })
+     
+     
 </script>
 
 <!-- Personal Information -->
@@ -20,6 +38,13 @@
                    <img src={imdhruv} alt="intro" class="-skew-y-2 -translate-y-1 w-full max-w-90">
                    <p class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
                </div>
+
+               <!-- EXTRANEOUS INFORMATION -->
+               {#if knowMeBetter}
+                <div class="my-5">
+                    {@html extraneousInformation}
+                </div>
+               {/if}
                <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">
                     {#each Links as link}
                         <a target="_blank" rel="noopener noreferrer" href={link.href} class="flex gap-x-0.5 hover:underline hover:scale-105 duration-200">
@@ -30,6 +55,19 @@
           </div>
      </div>
 
+     <!-- EXTRA LINKS -->
+     <!-- <div class="w-full">
+         <ul class="flex gap-5 justify-center">
+             <li class="">
+                 <button onclick={() => {toggleKMB()}} class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Know me Better<Icon icon="akar-icons:arrow-right"/></button>
+             </li>
+             <li class="">
+                 <a href="/blogs" class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">My Blogs<Icon icon="akar-icons:arrow-right"/></a>
+             </li>
+         </ul>
+     </div> -->
+     
+     
      <div class="flex flex-col gap-4">
           <div class="p-4">
 
@@ -47,7 +85,7 @@
                    <div class="flex flex-col w-full my-2.5">
                        <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">languages</h1>
                        <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                           {#each [...Talents.languages].sort((a, b) => a.name.length - b.name.length) as talent}
+                           {#each [...Talents.languages].sort((a, b) => a.name.length - b.name.length).reverse() as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>
                                     {talent.name}
@@ -60,7 +98,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">frameworks</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each [...Talents.frameworks].sort((a, b) => a.name.length - b.name.length) as talent}
+                            {#each [...Talents.frameworks].sort((a, b) => a.name.length - b.name.length).reverse() as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
                                      {talent.name}
@@ -73,7 +111,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">tech</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each [...Talents.packages].sort((a, b) => a.name.length - b.name.length) as talent}
+                            {#each [...Talents.packages].sort((a, b) => a.name.length - b.name.length).reverse() as talent}
                                  <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                      <Icon icon={talent.icon?.name}/>
                                      {talent.name}
@@ -86,7 +124,7 @@
                     <div class="flex flex-col w-full my-2.5">
                         <h1 class="text-[20px] absolute -translate-y-4 translate-x-2 px-2 border-white/10 border bg-main">miscellaneous</h1>
                         <div class="flex flex-wrap gap-1.5 border-t border-white/10 w-full py-5.5 px-2.5">
-                            {#each [...Talents.misc].sort((a, b) => a.name.length - b.name.length) as talent}
+                            {#each [...Talents.misc].sort((a, b) => a.name.length - b.name.length).reverse() as talent}
                                 <a href={talent.href} target="_blank" rel="noopener noreferrer" class="text-[20px] flex items-center p-2 border border-white/10 hover:border-white/50 duration-300 gap-2 hover:cursor-pointer">
                                     <Icon icon={talent.icon?.name}/>
                                     {talent.name}
