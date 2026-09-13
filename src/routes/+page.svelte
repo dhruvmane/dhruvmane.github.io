@@ -8,6 +8,7 @@
      import MobilePlayer from '$lib/components/MobilePlayerController.svelte'
      import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
      import Skills from '$lib/sections/content/Skills.svelte';
+	import Alert from '$lib/components/Alert.svelte';
      
 </script>
 
@@ -16,7 +17,9 @@
 </svelte:head>
 
 <div class="flex wallpaper page" id="page">
-
+    <div class="absolute w-full">
+        <Alert />
+    </div>
      <LeftSidebar />
      <main class="text-white md:ml-33.5 justify-self-center w-full max-w-full overflow-x-clip">
         <div id="#top"></div>

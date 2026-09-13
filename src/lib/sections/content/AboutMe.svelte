@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
      import { Talents, Links, details } from "$lib/modules/globals.svelte";
      import ProfilePic from '$lib/assets/images/dhruv.jpg'
      import imdhruv from '$lib/assets/icons/imdhruv.svg'
@@ -7,21 +7,29 @@
      import DOMPurify from 'dompurify';
      import aboutMeMarkdown from "$lib/texts/about-me.md?raw";
      import { onMount } from "svelte";
-	import Skills from "./Skills.svelte";
+     import Skills from "./Skills.svelte";
 
+     
      let knowMeBetter = $state(false);
      let extraneousInformation = $state("");
 
-     function toggleKMB() {
-         knowMeBetter != knowMeBetter;
-     }
      
      onMount(async () => {
          const raw = await marked.parse(aboutMeMarkdown);
          const purified = DOMPurify.sanitize(raw);
          extraneousInformation = purified;
      })
+
+     const email = "dhruvmaneofficial@gmail.com"
      
+     async function copyText() {
+         try {
+             await navigator.clipboard.writeText(email)
+             alert('Copied email to clipboard!')
+         } catch (err) {
+             console.log(err)
+         }
+     }
      
 </script>
 
@@ -52,7 +60,10 @@
                             <Icon icon={link.icon.name}/>
                         </a>
                     {/each}
-               </div>
+                    <button onclick={() => {copyText()}} class="text-[25px] hover:scale-105 hover:cursor-pointer -translate-y-1 relative group">
+                        <Icon icon="bxl:gmail" />
+                    </button>
+                </div>
           </div>
      </div>
 

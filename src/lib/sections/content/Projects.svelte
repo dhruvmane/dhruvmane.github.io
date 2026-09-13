@@ -53,7 +53,7 @@
     </main>
 
     {#if Projects.length > ProjectsMinVisible}
-    <button onclick={() => {toggleShowAll()}} class="text-center min-w-24.5 mt-2 px-2 py-1 border border-white/10 bg-white/5 hover:bg-white/10 duration-300 hover:cursor-pointer">
+    <button onclick={() => {toggleShowAll()}} class="font-ui text-white/50 text-center min-w-24.5 mt-2 rounded-[7px] px-2 py-1 border border-white/10 bg-white/5 hover:bg-white/10 duration-300 hover:cursor-pointer">
         {#if !showAll}
             Show More
         {:else}
