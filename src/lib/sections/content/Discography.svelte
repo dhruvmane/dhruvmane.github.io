@@ -136,7 +136,7 @@
                    {#each Music as music}
                         <button
                              onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}
-                             class=" font-ui text-left lowercase border-white/10 border grid grid-cols-2 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
+                             class="text-white/60 hover:text-white font-ui text-left lowercase border-white/10 border grid grid-cols-2 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
                         >
                              <span class="truncate min-w-0">{music.title}</span>
                              <span class="text-right">{music.duration}</span>

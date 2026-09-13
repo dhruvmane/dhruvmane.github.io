@@ -5,14 +5,15 @@
     --font-title: 'Jakarta Sans Regular';
     --font-ui: 'Jakarta Sans Regular';
     --font-content: 'DM Sans';
-
+    --font-blog-title: 'Imbue';
+    
     --color-main: #171717;
 
     --duration-ui: 500ms;
     --duration-ui-slow: 1000ms;
 
     --skew-ui: 5deg;
-    
+
     --animate-blink: blink 2s step-start infinite;
     @keyframes blink {
         0%, 100% { opacity: 1; }
@@ -52,7 +53,7 @@ body {
     height: 100%;
     scrollbar-width: thin;
     overflow-x: clip;
-    
+
     background-color: #0A0A0A;
     opacity: 1;
     background-image:  radial-gradient(circle at 9px 100%, transparent 8px, #141414 8px, #141414 9px, transparent 9px), radial-gradient(circle at 9px 0%, transparent 8px, #141414 8px, #141414 9px, transparent 9px);
@@ -88,7 +89,10 @@ html {
     font-family: 'Backrooms';
     src: url("./lib/assets/fonts/BackroomsEndCredits-Regular.ttf");
 }
-
+@font-face {
+    font-family: 'Imbue';
+    src: url("./lib/assets/fonts/Imbue.ttf");
+}
 
 ::selection {
     background: white;

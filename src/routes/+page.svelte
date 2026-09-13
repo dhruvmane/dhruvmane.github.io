@@ -6,6 +6,8 @@
      import Projects from '$lib/sections/content/Projects.svelte';
      import Discography from '$lib/sections/content/Discography.svelte';
      import MobilePlayer from '$lib/components/MobilePlayerController.svelte'
+     import LeftSidebar from '$lib/sections/LeftSidebar.svelte';
+     import Skills from '$lib/sections/content/Skills.svelte';
      
 </script>
 
@@ -13,17 +15,19 @@
      <title>dhruv - my portfolio</title>
 </svelte:head>
 
-<div class="flex" id="page">
+<div class="flex wallpaper page" id="page">
 
-     <!-- <LeftSidebar /> -->
+     <LeftSidebar />
      <main class="text-white md:ml-33.5 justify-self-center w-full max-w-full overflow-x-clip">
         <div id="#top"></div>
         <div class="my-10">
             <AboutMe />
+            <Skills />
         </div>
         <div class="my-10">
             <Projects />
         </div>
+
         <div class="my-10">
             <Discography />
         </div>
