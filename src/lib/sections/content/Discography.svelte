@@ -132,7 +132,7 @@
                    <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
               </div>
 
-              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-full">
+              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-100 justify-self-center">
                    {#each Music as music}
                         <button
                              onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}
