@@ -95,17 +95,6 @@ let Projects = [
                "PostgresSQL", "drizzle",
                "Astro"
           ]
-     },
-     {
-          name: "Mangase",
-          link: "https://github.com/the-mangase-group/website",
-          tagline: "Work in Progress",
-          description: "Revolutionizing Digital Mangas.",
-          stack: [
-               "Typescript", "fastify",
-               "PostgresSQL", "drizzle",
-               "Astro"
-          ]
      }
 ]
 
