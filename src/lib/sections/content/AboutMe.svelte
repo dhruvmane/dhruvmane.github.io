@@ -38,7 +38,7 @@
 <main id="about-me" class="group p-6 md:px-10 md:pt-10 md:w-200 w-full duration-300 ">
     
     <!-- INTRODUCTION -->
-     <div class="flex flex-col md:flex-row mb-5 gap-x-10 gap-y-4">
+     <div class="flex flex-col md:flex-row mb-2 gap-x-10 gap-y-4">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
                <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-25 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform -skew-y-3 -skew-x-ui hover:-skew-y-ui hover:-skew-x-6"/>
           </a>
@@ -68,16 +68,21 @@
      </div>
 
      <!-- EXTRA LINKS -->
-     <!-- <div class="w-full">
-         <ul class="flex gap-5 justify-center">
+     <div class="w-full">
+         <ul class="flex justify-center">
+             <!-- <li class=""> -->
+                 <!-- <button onclick={() => {toggleKMB()}} class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Know me Better<Icon icon="akar-icons:arrow-right"/></button> -->
+             <!-- </li> -->
              <li class="">
-                 <button onclick={() => {toggleKMB()}} class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Know me Better<Icon icon="akar-icons:arrow-right"/></button>
+                 <a href="/resume" class="flex gap-1 items-center opacity-70 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Resume<Icon icon="akar-icons:arrow-right"/></a>
              </li>
-             <li class="">
+             
+             <!-- <li class="">
                  <a href="/blogs" class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">My Blogs<Icon icon="akar-icons:arrow-right"/></a>
              </li>
+              -->
          </ul>
-     </div> -->
+     </div>
      
      
 </main>

@@ -6,7 +6,7 @@
     --font-ui: 'Jakarta Sans Regular';
     --font-content: 'DM Sans';
     --font-blog-title: 'Imbue';
-    
+
     --color-main: #171717;
 
     --duration-ui: 500ms;
@@ -63,7 +63,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  /*scrollbar-width: none;*/
   overflow-x: clip;
 }
 
