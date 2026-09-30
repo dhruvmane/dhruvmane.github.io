@@ -39,6 +39,7 @@ let Talents = {
         // { name: "Electrobun", href: "https://blackboard.sh/electrobun/", icon: { name: "devicon:bun" }},
         // { name: "Deno Desktop", href: "https://docs.deno.com/runtime/desktop/", icon: { name: "bxl:deno" }},
         { name: "Tauri", href: "https://v2.tauri.app/", icon: { name: "devicon-plain:tauri" }},
+        { name: "Wails", href: "https://wails.io/", icon: { name: "simple-icons:wails" }},
         { name: "Capacitor", href: "https://capacitorjs.com/", icon: { name: "devicon:capacitor" }},
         { name: "React Native", href: "https://reactnative.dev/", icon: { name: "bxl:react" }},
     ],

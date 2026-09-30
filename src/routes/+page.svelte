@@ -25,7 +25,7 @@
         <div id="#top"></div>
         <div class="my-10">
             <AboutMe />
-            <Skills />
+            <!-- <Skills /> -->
         </div>
         <div class="my-10">
             <Projects />
