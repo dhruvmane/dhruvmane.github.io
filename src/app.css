@@ -62,7 +62,6 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
   /*scrollbar-width: none;*/
   overflow-x: clip;
 }

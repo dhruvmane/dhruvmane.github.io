@@ -1,15 +1,16 @@
 <script lang="ts">
 	import favicon from '$lib/assets/images/dhruv.jpg';
 	import { onMount } from 'svelte';
-	import lenis from 'lenis';
+	// import lenis from 'lenis';
 	import { page } from '$lib/modules/globals.svelte';
 
 	import Footer from '$lib/sections/Footer.svelte';
 	
 	onMount(() => {
-	    const ref = new lenis({
-			autoRaf: true,
-		});
+	    // disable smooth scroll.
+	    // const ref = new lenis({
+		// 	autoRaf: true,
+		// });
 
 		window.addEventListener('scroll', () => {
 		    page.scroll.top = window.scrollY || document.documentElement.scrollTop;

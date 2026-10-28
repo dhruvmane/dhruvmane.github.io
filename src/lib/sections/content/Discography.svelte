@@ -103,7 +103,7 @@
      
 </script>
 
-<div id="discography" class="group p-6 md:p-10 w-full md:w-200 duration-300">
+<div id="discography" class="group p-6 md:p-10 w-full md:w-200 duration-300 flex flex-col">
 
     <div class="font-title md:-translate-x-10 group-hover:translate-x-0 duration-500 transition  flex items-center gap-2.5 font-bold text-3xl lowercase my-5">
         <span class="md:opacity-0 group-hover:opacity-100 transition-all duration-500 text-3xl items-center flex">
@@ -115,7 +115,7 @@
     </div>
 
     <!-- <h2 id="discography" class="text-3xl font-bold lowercase my-5">discography <span class="text-neutral-700">————————————————————</span></h2> -->
-     <div class="p-2 min-w-full md:min-w-201 flex duration-300">
+     <div class="p-2 min-w-full md:min-w-201 flex duration-300 flex-col items-center">
          <div class="items-center m-auto">
               <!-- <div class="flex w-full flex-1 flex-col items-center p-3">
                   <img src={ProfilePic} alt="cover" class="justify-self-start size-37.5">
@@ -132,7 +132,7 @@
                    <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
               </div>
 
-              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-100 justify-self-center">
+              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-full justify-self-center">
                    {#each Music as music}
                         <button
                              onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}

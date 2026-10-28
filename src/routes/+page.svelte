@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-     <title>dhruv - my portfolio</title>
+     <title>dhruv | my portfolio</title>
 </svelte:head>
 
 <div class="flex wallpaper page" id="page">
@@ -21,7 +21,7 @@
         <Alert />
     </div>
      <LeftSidebar />
-     <main class="text-white md:ml-33.5 justify-self-center w-full max-w-full overflow-x-clip">
+     <main class="text-white justify-self-center w-full max-w-full overflow-x-clip">
         <div id="#top"></div>
         <div class="my-10">
             <AboutMe />
