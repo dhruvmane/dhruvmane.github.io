@@ -96,7 +96,57 @@ let Projects = [
                "PostgresSQL", "drizzle",
                "Astro"
           ]
-     }
+     },
+     {
+          name: "Nascent",
+          link: "https://github.com/dhruvmane/nascent",
+          tagline: "Work in Progress",
+          description: "Improved Watch Party Experience.",
+          stack: [
+            "Typescript", "svelte",
+            "tauri", "rust", "postgresql"
+          ]
+     },
+     {
+          name: "goalden",
+          link: "https://github.com/dhruvmane/goalden",
+          tagline: "Your personal goals tracker.",
+          description: "Personal Goals Tracker tracks and visualizes your goals.",
+          stack: [
+            "Typescript", "svelte",
+            "astro", "tailwind", "java"
+          ]
+     },
+     {
+          name: "Lokiva",
+          link: "https://lokiva.vercel.app/",
+          tagline: "Selected for Pillai CoE Hackcelestial 2026",
+          description: "Real Indian Cultural Experiences. Packed Around your Exact Constraints",
+          stack: [
+            "Typescript", "React",
+            "express", "tailwind", "GSAP",
+            "firebase"
+          ]
+  },
+  {
+       name: "Sculk",
+       link: "https://github.com/officialbarden/sculk-cli",
+       tagline: "Hobby Project",
+       description: "(cli) a Minecraft Datapack Library Manager, inspired by npm, pip & cargo.",
+       stack: [
+         "Go", "cobra-cli",
+         "astro", "svelte"
+       ]
+  },
+  {
+       name: "Death Animations",
+       link: "https://github.com/officialbarden/gibbing",
+       tagline: "Hobby Project",
+       description: "Physics-based Minecraft Datapack that adds tiny exploding 'gibs' when mobs die, (>25K Downloads on Modrinth)",
+       stack: [
+         "mcfunction"
+       ]
+  }
 ]
 
 export { Talents, Projects, }

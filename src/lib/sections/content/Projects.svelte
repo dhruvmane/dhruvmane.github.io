@@ -4,7 +4,7 @@
      import LinkSvg from '$lib/assets/icons/link.svg'
      import Icon from '@iconify/svelte';
 
-     let ProjectsMinVisible = $state(3)
+     let ProjectsMinVisible = $state(6)
      let ProjectsVisibleCount = $derived(ProjectsMinVisible)
      let ProjectsVisible = $derived(Projects.slice(0, ProjectsVisibleCount));
      let showAll = $state(false)

@@ -10,7 +10,7 @@
 
 
     <ul class="hidden pt-12 pb-10 px-28 lg:grid grid-cols-1 gap-5 font-ui">
-        <li class="-skew-y-ui"><button onclick={() => {scrollTo({top: 0})}} class="hover:cursor-pointer duration-300 px-2 py-1 text-[12px] flex items-center gap-2 hover:bg-white/7 border border-transparent hover:border-white/50 w-fit" style="opacity: {page.scroll.percent * 500}%;">Go to Top <Icon icon="akar-icons:arrow-up"/></button></li>
+        <li class="-skew-y-ui"><button onclick={() => {scrollTo({top: 0})}} class="hover:cursor-pointer duration-300 px-2 py-1 text-[12px] flex items-center gap-2 hover:bg-white/7 border border-transparent hover:border-white/50 w-fit {page.scroll.percent < 0.1 ? 'pointer-events-none' : ''}" style="opacity: {page.scroll.percent * 500}%;">Go to Top <Icon icon="akar-icons:arrow-up"/></button></li>
         <li class="-skew-y-ui"><a href="#about-me"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">about me</a></li>
         <li class="-skew-y-ui"><a href="#projects"    class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">projects</a></li>
         <li class="-skew-y-ui"><a href="#discography" class="p-2 border border-white/5 hover:border-white/30 hover:bg-white/10 duration-400">discography</a></li>
