@@ -122,7 +122,7 @@
                   <h2>My Discography</h2>
               </div> -->
 
-              <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ">
+              <a class="opacity-90 hover:size-105 hover:opacity-100 transition-all" rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/artist/2cJZ9m2iORNR1T4on8ZKBZ">
                   <img src={disco} class="mb-10 w-full max-w-180 justify-self-center" alt="disco"/>
               </a>
               

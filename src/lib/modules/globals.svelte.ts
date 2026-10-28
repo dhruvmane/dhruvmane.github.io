@@ -1,5 +1,5 @@
 export const details = {
-    desc: "I am a Computer Science Student (excalidraw lover) & a Music Producer."
+    desc: "I am a Computer Science Student & a Music Producer."
 }
 
 export let page: any = $state({
@@ -132,7 +132,7 @@ let Projects = [
        name: "Sculk",
        link: "https://github.com/officialbarden/sculk-cli",
        tagline: "Hobby Project",
-       description: "(cli) a Minecraft Datapack Library Manager, inspired by npm, pip & cargo.",
+       description: "a Minecraft Datapack Library Manager, inspired by npm, pip & cargo.",
        stack: [
          "Go", "cobra-cli",
          "astro", "svelte"
@@ -142,7 +142,7 @@ let Projects = [
        name: "Death Animations",
        link: "https://github.com/officialbarden/gibbing",
        tagline: "Hobby Project",
-       description: "Physics-based Minecraft Datapack that adds tiny exploding 'gibs' when mobs die, (>25K Downloads on Modrinth)",
+       description: "Physics-based Minecraft Datapack that adds exploding 'gibs' (25K+ Downloads).",
        stack: [
          "mcfunction"
        ]
