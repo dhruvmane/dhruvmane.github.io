@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="hidden lg:w-1/3 md:flex flex-col lg:block h-full text-white p-10 text-2xl sticky top-0 self-start">
+<div class="hidden md:flex flex-col lg:block h-full text-white text-2xl sticky top-0 self-start">
 
 
     <ul class="hidden pt-12 pb-10 px-28 lg:grid grid-cols-1 gap-5 font-ui">

@@ -73,6 +73,6 @@
             <Icon icon="akar-icons:moon-fill" />
         {/if}
     </div>
-    <h3 class="uppercase flex items-center">{formattedTime.date}{formattedTime.suffix} {formattedTime.month}, {formattedTime.year}</h3>
+    <h3 class="uppercase flex items-center">{formattedTime.date}{formattedTime.suffix} {formattedTime.month.slice(0, 3)}, {formattedTime.year}</h3>
     <h3>{formattedTime.day}</h3>
 </main>
