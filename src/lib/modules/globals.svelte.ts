@@ -140,7 +140,7 @@ let Projects = [
   },
   {
        name: "Death Animations",
-       link: "https://github.com/officialbarden/gibbing",
+       link: "https://modrinth.com/project/gibbing",
        tagline: "Hobby Project",
        description: "Physics-based Minecraft Datapack that adds exploding 'gibs' (25K+ Downloads).",
        stack: [
