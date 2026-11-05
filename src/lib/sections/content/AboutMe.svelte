@@ -45,7 +45,7 @@
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
                <div class="w-full flex flex-col p-2">
                    <img src={imdhruv} alt="intro" class="-skew-y-2 -translate-y-1 w-full max-w-90">
-                   <p class="flex-1 text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
+                   <p class="text-sm font-medium my-5 md:my-0 max-w-100">{details.desc}</p>
                </div>
 
                <!-- EXTRANEOUS INFORMATION -->
@@ -56,7 +56,7 @@
                {/if}
                <div class="flex flex-wrap gap-2.5 md:p-2 text-xl px-2">
                     {#each Links as link}
-                        <a target="_blank" rel="noopener noreferrer" href={link.href} class="flex gap-x-0.5 hover:underline hover:scale-105 duration-200">
+                        <a target="_blank" rel="noopener noreferrer" href={link.href} class="flex gap-x-0.5 hover:scale-105 duration-200">
                             <Icon icon={link.icon.name}/>
                         </a>
                     {/each}
@@ -71,16 +71,17 @@
      <div class="w-full">
          <ul class="flex justify-center">
              <!-- <li class=""> -->
-                 <!-- <button onclick={() => {toggleKMB()}} class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Know me Better<Icon icon="akar-icons:arrow-right"/></button> -->
+                 <!-- <button onclick={() => {toggleKMB()}} class="flex gap-1 items-center opacity-50 px-2 py-1 hover:cursor-pointer font-ui">Know me Better<Icon icon="akar-icons:arrow-right"/></button> -->
              <!-- </li> -->
-             <li class="">
-                 <a href="/resume" class="flex gap-1 items-center opacity-70 px-2 py-1 hover:underline hover:cursor-pointer font-ui">Resume<Icon icon="akar-icons:arrow-right"/></a>
+             <li class="flex">
+                 <a href="/resume" class="m-auto flex gap-1 items-center opacity-50 hover:opacity-70 px-2 py-1 hover:cursor-pointer font-ui">Resume<Icon icon="akar-icons:arrow-right"/></a>
              </li>
              
-             <!-- <li class="">
-                 <a href="/blogs" class="flex gap-1 items-center opacity-50 px-2 py-1 hover:underline hover:cursor-pointer font-ui">My Blogs<Icon icon="akar-icons:arrow-right"/></a>
+             <li class="flex">
+                 <a href="/blogs" class="m-auto flex gap-1 items-center opacity-50 hover:opacity-70 px-2 py-1 hover:cursor-pointer font-ui">Blogs<Icon icon="akar-icons:arrow-right"/></a>
              </li>
-              -->
+             
+             
          </ul>
      </div>
      
