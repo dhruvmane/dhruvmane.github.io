@@ -12,17 +12,11 @@
 
 <main class="text-white min-h-screen w-full page wallpaper p-5">
     <div class="md:mx-75 md:my-20">
-        <h2 class="font-blog-title text-6xl md:text-8xl tracking-tighter text-center opacity-50 md:mb-25">My Blogs</h2>
-    
-        <p class="group/blogs tracking-tighter text-center m-auto leading-tight min-h-100 w-100">
-            <BlogWidget blog="My Journey in Systems Programming"/>
-            <BlogWidget blog="My Journey in Systems Programming"/>
-            <BlogWidget blog="Systems Programming"/>
-            <BlogWidget blog="Linux"/>
-            <BlogWidget blog="My Journey in Systems Programming"/>
-            <BlogWidget blog="Linux"/>
-            <BlogWidget blog="Linux"/>
-            
+        <h2 class="font-blog-title text-6xl md:text-8xl tracking-tighter text-center opacity-50 mb-25 md:mb-25">My Blogs</h2>
+        <p class="group/blogs tracking-tighter text-center m-auto leading-tight min-h-100 md:w-100">
+            {#each blogs as blog}
+                <BlogWidget blog={blog}/>
+            {/each}
         </p>
     </div>
 </main>

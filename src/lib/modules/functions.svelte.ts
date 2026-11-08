@@ -1,11 +1,13 @@
 export function getAllBlogs() {
     // Get Blogs
-    const blogs = import.meta.glob('/src/lib/blogs/*.mdx', { query: '?raw', import: 'default', eager: true });
+    const blogs = import.meta.glob('/src/lib/blogs/*.mdx', { eager: true });
     let paths = Object.entries(blogs).map(([path, file]) => {
-        const metadata = (file as any).metadata;
-        const slug = path.split('/').pop()?.replace('.mdx', '')
+      const metadata = (file as any).metadata;
 
-        return { slug, metadata, path }
+      // ../this-is-a-blog.mdx => this-is-a-blog
+      const slug = path.split('/').pop()?.replace('.mdx', '')
+
+      return { slug, metadata, path }
     }).filter(blog => blog.slug?.split("")[0] !== '_')
 
     return paths

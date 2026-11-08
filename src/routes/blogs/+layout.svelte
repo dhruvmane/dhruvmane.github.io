@@ -5,9 +5,9 @@
 	import lenis from 'lenis';
 
 	onMount(() => {
-	    const ref = new lenis({
-			autoRaf: true,
-		});
+	    // const ref = new lenis({
+			// autoRaf: true,
+		// });
 	})
 
 
