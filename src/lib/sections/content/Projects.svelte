@@ -32,10 +32,10 @@
 
     <main class="grid grid-cols-1 md:flex md:flex-row md:flex-wrap gap-2">
          {#each ProjectsVisible as project}
-              <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-full md:w-fit min-h-0 p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
+              <a target="_blank" rel="noopener noreferrer" href={project.link} class="opacity-50 hover:opacity-80 flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-full md:w-fit min-h-0 p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-150">
                    <div class="">
                        <div class="text-3xl flex gap-x-1">
-                           <span class="">
+                           <span class="lowercase">
                                {project.name}
                            </span>
                            <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5">

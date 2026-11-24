@@ -127,7 +127,7 @@ let Projects = [
             "express", "tailwind", "GSAP",
             "firebase"
           ]
-  },
+     },
   {
        name: "Sculk",
        link: "https://github.com/officialbarden/sculk-cli",
