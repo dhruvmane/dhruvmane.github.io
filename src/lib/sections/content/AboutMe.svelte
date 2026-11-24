@@ -40,7 +40,7 @@
     <!-- INTRODUCTION -->
      <div class="flex flex-col md:flex-row mb-2 gap-x-10 gap-y-4">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/dhruvmane" class="flex items-center">
-               <img src={ProfilePic} alt="Profile" class="md:m-3 shrink-0 w-25 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform -skew-y-3 -skew-x-ui hover:-skew-y-ui hover:-skew-x-6"/>
+               <img src="https://github.com/dhruvmane.png" alt="Profile" class="md:m-3 shrink-0 w-25 md:w-50 saturate-0 border border-white/7 duration-300 transition-transform"/>
           </a>
           <div class="md:mt-6 flex flex-col gap-2 md:gap-0">
                <div class="w-full flex flex-col p-2">
