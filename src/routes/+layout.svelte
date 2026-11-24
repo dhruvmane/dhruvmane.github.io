@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="https://github.com/dhruvmane.png" />
 </svelte:head>
 
 <div class="">
