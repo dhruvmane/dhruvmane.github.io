@@ -30,9 +30,9 @@
         </span>
     </div>
 
-    <main class="flex flex-row flex-wrap md:grid-cols-3 gap-2">
+    <main class="grid grid-cols-1 md:flex md:flex-row md:flex-wrap gap-2">
          {#each ProjectsVisible as project}
-              <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-fit min-h-0 p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
+              <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-full md:w-fit min-h-0 p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
                    <div class="">
                        <div class="text-3xl flex gap-x-1">
                            <span class="">
