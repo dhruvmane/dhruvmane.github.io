@@ -30,20 +30,22 @@
         </span>
     </div>
 
-    <main class="grid grid-cols-1 md:grid-cols-3 md:w-200 gap-2">
+    <main class="flex flex-row flex-wrap md:grid-cols-3 gap-2">
          {#each ProjectsVisible as project}
-              <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-full md:w-65 h-full p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
+              <a target="_blank" rel="noopener noreferrer" href={project.link} class="flex backdrop-blur-[1px] flex-col hover:cursor-pointer w-fit min-h-0 p-4 bg-white/3 border border-white/10 hover:border-white/30 hover:bg-white/5 duration-500">
                    <div class="">
                        <div class="text-3xl flex gap-x-1">
-                           {project.name}
+                           <span class="">
+                               {project.name}
+                           </span>
                            <img src={LinkSvg} alt="" class="invert size-5 translate-y-0.5">
                        </div>
                        {#if project.tagline}
                             <p class="text-[9px] font-ui text-white/60">{project.tagline}</p>
                        {/if}
                    </div>
-                   <p class="my-2.5 min-h-25">{project.description}</p>
-                   <div class="flex flex-wrap-reverse mt-auto">
+                   <p class="mt-2.5 max-w-60 min-h-25">{project.description}</p>
+                   <div class="flex flex-wrap-reverse max-w-65 mt-auto">
                         {#each [...project.stack].reverse().sort((a, b) => a.length - b.length) as stack}
                             <Tags label={stack}/>
                         {/each}

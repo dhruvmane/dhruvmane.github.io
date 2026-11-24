@@ -11,8 +11,8 @@ export const Links = [
     { name: "LinkedIn", href: "https://www.linkedin.com/in/dhruv-mane-1b4b4935b/", icon: {name: "akar-icons:linkedin-box-fill"}},
     { name: "Github", href: "https://github.com/dhruvmane", icon: {name: "akar-icons:github-fill"}},
     { name: "Instagram", href: "https://instagram.com/dhruvvmh", icon: {name: "akar-icons:instagram-fill"}},
-    { name: "X", href: "https://x.com/dhruvvmh", icon: {name: "bi:twitter-x"}},
-    { name: "Bluesky", href: "https://bsky.app/profile/dhruvmane.bsky.social", icon: {name: "bi:bluesky"}},
+    // { name: "X", href: "https://x.com/dhruvvmh", icon: {name: "bi:twitter-x"}},
+    // { name: "Bluesky", href: "https://bsky.app/profile/dhruvmane.bsky.social", icon: {name: "bi:bluesky"}},
 ]
 
 let Talents = { 
@@ -71,7 +71,7 @@ let Projects = [
         name: "TradeBull",
         link: "https://tradebull-three.vercel.app/",
         tagline: "Won Hacktoon 2026 @ AIKTC",
-        description: "a Virtual Trading Simulator, Same Feeling & Zero Risk.",
+        description: "a Trading simulator with real-world stock prices.",
         stack: [
                "React", "Vite", "express.js"
         ]
@@ -90,7 +90,7 @@ let Projects = [
           name: "Mangase",
           link: "https://github.com/the-mangase-group/website",
           tagline: "Work in Progress",
-          description: "Revolutionizing Digital Mangas.",
+          description: "A work-in-progress manga website.",
           stack: [
                "Typescript", "fastify",
                "PostgresSQL", "drizzle",
@@ -101,7 +101,7 @@ let Projects = [
           name: "Nascent",
           link: "https://github.com/dhruvmane/nascent",
           tagline: "Work in Progress",
-          description: "Improved Watch Party Experience.",
+          description: "an OSS Discord clone with focus on watchpartying.",
           stack: [
             "Typescript", "svelte",
             "tauri", "rust", "postgresql"
@@ -111,7 +111,7 @@ let Projects = [
           name: "goalden",
           link: "https://github.com/dhruvmane/goalden",
           tagline: "Your personal goals tracker.",
-          description: "Personal Goals Tracker tracks and visualizes your goals.",
+          description: "A website to track your daily goals, for a college project.",
           stack: [
             "Typescript", "svelte",
             "astro", "tailwind", "java"
@@ -121,7 +121,7 @@ let Projects = [
           name: "Lokiva",
           link: "https://lokiva.vercel.app/",
           tagline: "Selected for Pillai CoE Hackcelestial 2026",
-          description: "Real Indian Cultural Experiences. Packed Around your Exact Constraints",
+          description: "an itinerary creating website for tourism in India.",
           stack: [
             "Typescript", "React",
             "express", "tailwind", "GSAP",
@@ -132,7 +132,7 @@ let Projects = [
        name: "Sculk",
        link: "https://github.com/officialbarden/sculk-cli",
        tagline: "Hobby Project",
-       description: "a Minecraft Datapack Library Manager, inspired by npm, pip & cargo.",
+       description: "a library/package manager for minecraft's ingame scripting language: mcfunction.",
        stack: [
          "Go", "cobra-cli",
          "astro", "svelte"
@@ -142,7 +142,7 @@ let Projects = [
        name: "Death Animations",
        link: "https://modrinth.com/project/gibbing",
        tagline: "Hobby Project",
-       description: "Physics-based Minecraft Datapack that adds exploding 'gibs' (25K+ Downloads).",
+       description: "physics-based game mod scripted in mcfunction that adds exploding entities.",
        stack: [
          "mcfunction"
        ]
