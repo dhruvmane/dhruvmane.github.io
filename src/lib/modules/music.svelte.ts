@@ -34,7 +34,7 @@ let Music = [
      },
      {
           id: 7,
-          title: "gutsexplosionpowermillion",
+          title: "gtsexplsnpwmil",
           duration: "05:19",
           src: gutsexplosion
      },

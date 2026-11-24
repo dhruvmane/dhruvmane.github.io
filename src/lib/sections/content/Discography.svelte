@@ -16,6 +16,13 @@
      let newAudio: HTMLAudioElement;
      let oldAudio: HTMLAudioElement;
 
+     function isToggled(id: number): boolean {
+       if (_currentlyPlaying.id === id) {
+         return true
+       }
+       return false
+     }
+     
      export async function toggleMusic(id: number, oldAudio: HTMLAudioElement, newAudio: HTMLAudioElement) {
           let music = Music.find(music => music.id === id)
           oldAudio = document.getElementById(`music-${_currentlyPlaying.id}`) as HTMLAudioElement
@@ -132,14 +139,13 @@
                    <input bind:value={volume} type="range" min="0" max="100" class="accent-neutral-200 cursor-pointer [&::webkit-slider-thumb]: ">
               </div>
 
-              <div class="flex flex-col text-left gap-1 px-4 md:px-10 w-full justify-self-center">
-                   {#each Music as music}
+              <div class="flex flex-row flex-wrap text-left gap-1 px-4 md:px-10 justify-center">
+                   {#each Music.sort((a, b) => a.title.length + b.title.length).reverse() as music}
                         <button
-                             onclick={() => {toggleMusic(music.id, oldAudio, newAudio)}}
-                             class="text-white/60 hover:text-white font-ui text-left lowercase border-white/10 border grid grid-cols-2 p-2 px-5 hover:bg-white/10 duration-500 hover:cursor-pointer"
+                             onclick={() => {toggleMusic(music.id, oldAudio!, newAudio!)}}
+                             class=" {isToggled(music.id) && musicState.isPlaying ? 'bg-white text-black ' : 'text-white/60 hover:bg-white/10 hover:text-white lowercase'} w-fit font-ui gap-5 text-center flex  border-white/10 border p-2 px-5 hover:cursor-pointer"
                         >
-                             <span class="truncate min-w-0">{music.title}</span>
-                             <span class="text-right">{music.duration}</span>
+                             <span class="truncate min-w-0 w-fit">{music.title}</span>
                         </button>
                         <audio id={"music-"+ music.id} src={music.src}></audio>
                    {/each}
