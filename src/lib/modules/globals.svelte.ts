@@ -88,7 +88,7 @@ let Projects = [
      },
      {
           name: "Mangase",
-          link: "https://github.com/the-mangase-group/website",
+          link: "https://github.com/the-mangase-team/website",
           tagline: "Work in Progress",
           description: "A work-in-progress manga website.",
           stack: [
